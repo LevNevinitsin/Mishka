@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Лев Невиницин](https://up.htmlacademy.ru/adaptive/21/user/1252355).
-* Наставник: `Неизвестно`.
+* Наставник: Владислав Ермолаев.
 
 ---
 
