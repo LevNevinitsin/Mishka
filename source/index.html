@@ -1,12 +1,231 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
+    <title>Интернет-магазин «Мишка»</title>
   </head>
-  <body>
+  <body class="page__body">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+    <header class="page-header">
+      <h1 class="visually-hidden">«Мишка» - интернет-магазин игрушек ручной работы</h1>
+      <div class="page-header__wrapper"> <!-- Центрируется весь header, включая логотип -->
+        <a class="logo"> <!-- Блок, потому что на планшетной и десктопной версиях логотип будет ещё в футере -->
+          <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
+        </a>
+        <nav class="main-navigation">
+          <h2 class="visually-hidden">Навигация по разделам сайта</h2>
+          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="form.html">Вязание на заказ</a> <!-- Так до конца и не понял, почему тут не нужен класс. Ну, вероятно, пойму, когда дело до CSS дойдет  -->
+            </li>
+            <li class="main-navigation__item main-navigation__item--search"> <!-- Добавил модификатор, т.к. пункт декорируется иконкой -->
+              <a href="blank.html">Поиск по сайту</a>
+            </li>
+            <li class="main-navigation__item main-navigation__item--cart"> <!-- Добавил модификатор, т.к. пункт декорируется иконкой -->
+              <a href="blank.html">Корзина: пока пуста</a>
+            </li>
+            <li class="main-navigation__item main-navigation__item--additional"> <!-- Этот пункт есть только в десктопной версии -->
+              <a href="blank.html">Новые поступления</a>
+            </li>
+            <li class="main-navigation__item main-navigation__item--additional"> <!-- Этот пункт есть только в десктопной версии -->
+              <a href="blank.html">Распродажа</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="page-header__shipping">Бесплатная доставка по России</p>
+        <img src="https://via.placeholder.com/320x282" width="320" height="282" alt="Игрушки ручной работы"> <!-- На фоновой картинке изображен сам продукт, поэтому разметил как контент -->
+        <p class="page-header__title">Милые штуки ручной работы для дома</p> <!-- Думаю, этот текст не на 100% подходит под тег h -->
+      </div>
+    </header>
+
+    <main class="page-main">
+      <nav class="sub-navigation"> <!-- Эта навигация размечена в main, а не в header, потому что на других страницах её нет -->
+        <h2 class="visually-hidden">Навигация по продукции по типу товара</h2>
+        <ul class="sub-navigation__list">
+          <li class="sub-navigation__item sub-navigation__item--home-decor">
+            <a href="blank.html">
+              Предметы<br>
+              интерьера
+            </a>
+          </li>
+          <li class="sub-navigation__item sub-navigation__item--childrens-toys">
+            <a href="blank.html">
+              Детские<br>
+              игрушки
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="featured">
+        <div class="featued__wrapper">
+          <h2 class="featured__title">Товар недели</h2>
+          <h3 class="featured__subtitle">Вязаные корзинки</h3>
+          <p class="featured__description">Экологически чистая пряжа,
+            <br>ручная работа. Доступны в шести
+            <br>расцветках, и трех размерах.</p>
+          <dl class="featured__list">
+            <div class="featured__item">
+              <dt class="featured__characteristic">Цвет:</dt> <!-- Слово characteristic какое-то сложное слишком, но не знаю чем попроще заменить -->
+              <dd class="featured__value">«Тиффани»/серый</dd>
+            </div>
+            <div class="featured__item">
+              <dt class="featured__characteristic">Диаметр:</dt>
+              <dd class="featured__value">25 см</dd>
+            </div>
+            <div class="featured__item">
+              <dt class="featured__characteristic">Высота:</dt>
+              <dd class="featured__value">15 см</dd>
+            </div>
+          </dl>
+        </div>
+        <img src="https://via.placeholder.com/260x315" width="260" height="315" alt="Три вязаные корзинки трех разных размеров в двух расцветках">
+        <p class="featured__price">Цена: 990 руб.</p>
+        <button class="featured__order button" type="button">Заказать</button>
+      </section>
+
+      <section class="advantages">
+        <div class="advantages__wrapper">
+          <h2 class="visually-hidden">Наши преимущества</h2>
+          <p class="advantages__title">Коротко о нас:</p>
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item--ecologic">
+              Экологически<br>
+              чистые материалы
+            </li>
+            <li class="advantages__item advantages__item--scandinavian">
+              Скандинавский стиль<br>
+              по российской цене
+            </li>
+            <li class="advantages__item advantages__item--more-likes">
+              Увеличивает лайки<br>
+              на фотографиях
+            </li>
+            <li class="advantages__item advantages__item--hand-made">
+              Связано вручную с любовью и умилением
+            </li>
+            <li class="advantages__item advantages__item--native-support">
+              Поддержка отечественного производителя
+            </li>
+            <li class="advantages__item advantages__item--gift-pack">
+              Поставляется в подарочной упаковке
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="reviews__wrapper slider">
+          <h2 class="reviews__title">Отзывы</h2>
+          <ul class="reviews__list slider__list">
+            <li class="reviews__item slider__item">
+              <blockquote>
+                <p class="reviews__text">
+                  Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
+                  как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+                  и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                </p>
+                <cite>
+                  <span class="reviews__author">Анастасия Красильникова</span><br>
+                  <span class="reviews__social">@misssssiskras</span>
+                </cite>
+              </blockquote>
+            </li>
+            <li class="reviews__item slider__item">
+              <blockquote>
+                <p class="reviews__text">
+                  Понравился ассортимент игрушек, доступные цены. Приятный менеджер, качественное и быстрое обслуживание.
+                </p>
+                <cite>
+                  <span class="reviews__author">Алексей Семёнов</span><br>
+                  <span class="reviews__social">@sema11</span>
+                </cite>
+              </blockquote>
+            </li>
+            <li class="reviews__item slider__item"> <!-- Сделал три пункта, т.к. всё равно планирую реализовывать слайдер -->
+              <blockquote>
+                <p class="reviews__text">
+                  Подтвердили заказ быстро, привезли в указанный диапазон, товар был в красивой подарочной упаковке.
+                  Приятно удивило, что при цене заметно дешевле, чем у всех, игрушка оказалась оригинальной. Будем заказывать ещё!
+                </p>
+                <cite>
+                  <span class="reviews__author">Наталья Петрова</span><br>
+                  <span class="reviews__social">@natusik1985</span>
+                </cite>
+              </blockquote>
+            </li>
+          </ul>
+          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+          <button class="reviews__next" type="button">Следующий отзыв</button>
+          <a class="reviews__write button" href="blank.html">Написать</a>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <dl class="contacts__list">
+          <div class="contacts__item">
+            <dt class="contacts__type">e-mail:</dt>
+            <dd class="contacts__adress">
+              <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </dd>
+          </div>
+          <div class="contacts__item">
+            <dt class="contacts__type">адрес:</dt>
+            <dd class="contacts__adress">
+              г. Санкт-Петербург<br>
+              ул. Большая Конюшенная<br>
+              д. 19/8, офис 101</dd>
+          </div>
+        </dl>
+        <img src="https://via.placeholder.com/320x454" width="320" height="454" alt="Местоположение магазина на карте">
+        <a class="contacts__write button" href="blank.html">Напишите нам</a>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo"></div>
+          <a class="logo logo--bottom"> <!-- Логотип в футере есть в планшетной и десктопной версиях и визуально он отличается от логотипа в шапке -->
+            <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»"> <!-- Опять же, не до конца понимаю, нужен ли тут класс -->
+          </a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#">Мы в Твиттере</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Academy</span>
+            <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <section class="modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__lead">Выберите размер:</p>
+      <ul class="modal__list">
+        <li class="modal__item"><button class="modal__size modal__size--active">S</button></li>
+        <li class="modal__item"><button class="modal__size">M</button></li>
+        <li class="modal__item"><button class="modal__size">L</button></li>
+      </ul>
+      <button class="modal__add">Добавить</button>
+    </section>
 
   </body>
 </html>
