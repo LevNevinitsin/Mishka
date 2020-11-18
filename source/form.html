@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Вязание на заказ</title>
+  </head>
+  <body class="page__body">
+
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="logo" href="index.html">
+          <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
+        </a>
+        <nav class="main-navigation">
+          <h2 class="visually-hidden">Навигация по разделам сайта</h2>
+          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="form.html">Вязание на заказ</a>
+            </li>
+            <li class="main-navigation__item main-navigation__item--search">
+              <a href="blank.html">Поиск по сайту</a>
+            </li>
+            <li class="main-navigation__item main-navigation__item--cart">
+              <a href="blank.html">Корзина: пока пуста</a>
+            </li>
+            <li class="main-navigation__item main-navigation__item--additional">
+              <a href="blank.html">Новые поступления</a>
+            </li>
+            <li class="main-navigation__item main-navigation__item--additional">
+              <a href="blank.html">Распродажа</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="page-header__shipping">Бесплатная доставка по России</p>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <h1 class="page-main__title">Вязание на заказ</h1>
+      <p class="page-main__lead">
+        Мы будем рады воплотить в жизнь ваши пожелания!
+        Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
+      <form class="order" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="order__field-group">
+          <legend class="order__legend">Тип</legend>
+          <ul class="order__list">
+            <li class="order__item">
+              <label class="order__label">
+                <input class="order__radio" type="radio" name="product-group" value="home-decor" checked>Аксессуар для интерьера
+              </label>
+            </li>
+            <li class="order__item">
+              <label class="order__label">
+                <input class="order__radio" type="radio" name="product-group" value="children-toys">Детская игрушка
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="order__section"> <!-- div накладывает серый фон на всю ширину (планшет и декстоп), fieldset центрирует контентную область. -->
+          <fieldset class="order__field-group">
+            <legend class="order__legend">Цвет</legend>
+            <ul class="order__list">
+              <li class="order__item">
+                <label class="order__label">
+                  <input class="order__checkbox" type="checkbox" name="white" checked>Белый
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__label">
+                  <input class="order__checkbox" type="checkbox" name="gray" checked>Серый
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__label">
+                  <input class="order__checkbox" type="checkbox" name="tiffany">«Тиффани»
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__label">
+                  <input class="order__checkbox" type="checkbox" name="black">Черный
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__label">
+                  <input class="order__checkbox" type="checkbox" name="pink">Розовый
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__label">
+                  <input class="order__checkbox" type="checkbox" name="orange">Оранжевый
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="order__field-group">
+          <legend class="order__legend">ФИО</legend>
+          <ul class="order__list">
+            <li class="order__item">
+              <label class="order__label order__label--name">
+                Имя: <input class="order__text-input" type="text" name="first-name" placeholder="Введите ваше имя*" required>
+              </label>
+            </li>
+            <li class="order__item">
+              <label class="order__label order__label--name">
+                Фамилия: <input class="order__text-input" type="text" name="last-name" placeholder="Укажите фамилию*" required>
+              </label>
+            </li>
+            <li class="order__item">
+              <label class="order__label order__label--name">
+                Отчество: <input class="order__text-input" type="text" name="middle-name" placeholder="Отчество, если желаете">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="order__section">
+          <label class="order__legend">
+            Тел <input
+              class="order__text-input order__text-input--tel"
+              type="tel"
+              name="phone-number"
+              placeholder="+7 ХХХ ХХХ ХХ ХХ*"
+              pattern="\+\d \d{3} \d{3} \d{2} \d{2}"
+              aria-label="Формат введения номера: плюс цифра пробел три цифры пробел три цифры пробел две цифры пробел две цифры"
+              required> <!-- ТЗ пункт 5.4 + aria-label для доступности -->
+          </label>
+          <label class="order__legend">
+            E-mail <input
+              class="order__text-input order__text-input--e-mail"
+              type="email"
+              name="e-mail"
+              placeholder="Ваш Email*"
+              pattern=".+@.+\..+"
+              required> <!-- ТЗ пункт 5.4 -->
+          </label>
+        </div>
+        <label class="order__legend">
+          Доп <textarea class="order__text-input order__text-input--big" name="additional-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </label>
+        <p class="order__star-legend">
+          <small>*Поля обязательны для заполнения</small>
+        </p>
+        <button class="order__submit button" type="submit">Отправить заказ</button>
+      </form>
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo"></div>
+          <a class="logo logo--bottom"> <!-- Логотип в футере есть в планшетной и десктопной версиях и визуально он отличается от логотипа в шапке -->
+            <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
+          </a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#">Мы в Твиттере</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Academy</span>
+            <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

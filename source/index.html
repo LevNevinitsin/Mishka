@@ -7,7 +7,6 @@
   <body class="page__body">
 
     <header class="page-header">
-      <h1 class="visually-hidden">«Мишка» - интернет-магазин игрушек ручной работы</h1>
       <div class="page-header__wrapper"> <!-- Центрируется весь header, включая логотип -->
         <a class="logo"> <!-- Блок, потому что на планшетной и десктопной версиях логотип будет ещё в футере -->
           <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
@@ -37,12 +36,13 @@
           </ul>
         </nav>
         <p class="page-header__shipping">Бесплатная доставка по России</p>
-        <img src="https://via.placeholder.com/320x282" width="320" height="282" alt="Игрушки ручной работы"> <!-- На фоновой картинке изображен сам продукт, поэтому разметил как контент -->
-        <p class="page-header__title">Милые штуки ручной работы для дома</p> <!-- Думаю, этот текст не на 100% подходит под тег h -->
       </div>
     </header>
 
     <main class="page-main">
+      <h1 class="visually-hidden">«Мишка» - интернет-магазин игрушек ручной работы</h1>
+      <img src="https://via.placeholder.com/320x282" width="320" height="282" alt="Игрушки ручной работы"> <!-- На фоновой картинке изображен сам продукт, поэтому разметил как контент -->
+      <p class="page-main__title">Милые штуки ручной работы для дома</p>
       <nav class="sub-navigation"> <!-- Эта навигация размечена в main, а не в header, потому что на других страницах её нет -->
         <h2 class="visually-hidden">Навигация по продукции по типу товара</h2>
         <ul class="sub-navigation__list">
@@ -65,9 +65,11 @@
         <div class="featued__wrapper">
           <h2 class="featured__title">Товар недели</h2>
           <h3 class="featured__subtitle">Вязаные корзинки</h3>
-          <p class="featured__description">Экологически чистая пряжа,
-            <br>ручная работа. Доступны в шести
-            <br>расцветках, и трех размерах.</p>
+          <p class="featured__description">
+            Экологически чистая пряжа,<br>
+            ручная работа. Доступны в шести<br>
+            расцветках, и трех размерах.
+          </p>
           <dl class="featured__list">
             <div class="featured__item">
               <dt class="featured__characteristic">Цвет:</dt> <!-- Слово characteristic какое-то сложное слишком, но не знаю чем попроще заменить -->
@@ -85,7 +87,7 @@
         </div>
         <img src="https://via.placeholder.com/260x315" width="260" height="315" alt="Три вязаные корзинки трех разных размеров в двух расцветках">
         <p class="featured__price">Цена: 990 руб.</p>
-        <button class="featured__order button" type="button">Заказать</button>
+        <a class="featured__order button" href="blank.html">Заказать</a>
       </section>
 
       <section class="advantages">
@@ -138,23 +140,26 @@
             <li class="reviews__item slider__item">
               <blockquote>
                 <p class="reviews__text">
-                  Понравился ассортимент игрушек, доступные цены. Приятный менеджер, качественное и быстрое обслуживание.
+                  Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков,
+                  как у популярных инстамамочек. В отчаянии, я накупила аксессуарови игрушек в Мишке,
+                  и мои фотографии сразу стали более стильными, а также набирают больше лайков!
                 </p>
                 <cite>
-                  <span class="reviews__author">Алексей Семёнов</span><br>
-                  <span class="reviews__social">@sema11</span>
+                  <span class="reviews__author">Екатерина Красильникова</span><br>
+                  <span class="reviews__social">@misssssiskras2</span>
                 </cite>
               </blockquote>
             </li>
             <li class="reviews__item slider__item"> <!-- Сделал три пункта, т.к. всё равно планирую реализовывать слайдер -->
               <blockquote>
                 <p class="reviews__text">
-                  Подтвердили заказ быстро, привезли в указанный диапазон, товар был в красивой подарочной упаковке.
-                  Приятно удивило, что при цене заметно дешевле, чем у всех, игрушка оказалась оригинальной. Будем заказывать ещё!
+                  Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков,
+                  как у популярных инстамамочек. В отчаянии, я накупила аксессуарови игрушек в Мишке,
+                  и мои фотографии сразу стали более стильными, а также набирают больше лайков!
                 </p>
                 <cite>
-                  <span class="reviews__author">Наталья Петрова</span><br>
-                  <span class="reviews__social">@natusik1985</span>
+                  <span class="reviews__author">Елена Красильникова</span><br>
+                  <span class="reviews__social">@misssssiskras3</span>
                 </cite>
               </blockquote>
             </li>
