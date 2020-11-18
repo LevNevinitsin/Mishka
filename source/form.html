@@ -7,7 +7,7 @@
   <body class="page__body">
 
     <header class="page-header">
-      <h1 class="page-header__title">Вязание на заказ</h1> <!-- На макете визуально эта надпись идет после навигации, но ставить в разметке h1 после h2 как-то нелогично -->
+      <h1 class="visually-hidden">Форма заявки на заказ</h1> <!-- Исходил из того, что наша задача - поместить h1 в хедер и при этом не брать текст "Вязание на заказ", чтобы не было дублирования -->
       <div class="page-header__wrapper">
         <a class="logo" href="index.html">
           <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
@@ -41,6 +41,7 @@
     </header>
 
     <main class="page-main">
+      <p class="page-main__title">Вязание на заказ</p>
       <p class="page-main__lead">
         Мы будем рады воплотить в жизнь ваши пожелания!
         Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
@@ -140,7 +141,7 @@
           </label>
         </div>
         <label class="order__legend">
-          Доп <textarea class="order__text-input order__text-input--big" type="text" name="additional-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          Доп <textarea class="order__text-input order__text-input--big" name="additional-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </label>
         <p class="order__star-legend">
           <small>*Поля обязательны для заполнения</small>
