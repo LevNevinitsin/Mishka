@@ -1,0 +1,33 @@
+.main-navigation__list {
+  padding: 0;
+  list-style: none;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.main-navigation__item {
+  border-bottom: 1px solid $navigation-item-border;
+
+  &:first-child {
+    border-top: 1px solid $navigation-item-border;
+  }
+}
+
+.main-navigation__wrapper {
+  margin: 0 auto;
+  padding: 27px 30px 27px 46px;
+  width: 260px;
+}
+
+.main-navigation__link {
+  color: $navigation-link;
+
+  &:hover {
+    color: $navigation-link-hover;
+  }
+
+  &:active {
+    color: $navigation-link-active;
+  }
+}

@@ -1,0 +1,38 @@
+.sub-navigation {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.sub-navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sub-navigation__link {
+  display: block;
+  padding: 24px 0 31px;
+  color: $subnavigation-link;
+
+  &--home-decor {
+    background-color: $decor-background;
+
+    &:hover {
+      background-color: $decor-background-hover;
+    }
+  }
+
+  &--children-toys {
+    background-color: $toys-background;
+
+    &:hover {
+      background-color: $toys-background-hover;
+    }
+  }
+}
+
+.sub-navigation__wrapper {
+  margin: 0 auto;
+  width: 260px;
+}

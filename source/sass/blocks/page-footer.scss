@@ -1,0 +1,25 @@
+.page-footer {
+  padding: 0;
+  background: $footer-background;
+}
+
+.page-footer__wrapper {
+  margin: 0 auto;
+  width: 260px;
+}
+
+.social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.copyright__text {
+  font-size: 19px;
+  line-height: 18px;
+  vertical-align: middle;
+}
+
+.copyright__logo {
+  vertical-align: middle;
+}

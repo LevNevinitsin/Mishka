@@ -1,0 +1,21 @@
+.button {
+  padding: 14px;
+  width: 260px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: $button-text;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid $button-border;
+
+  &:hover {
+    color: $button-text-hover;
+    background-color: $button-background-hover;
+  }
+
+  &:active {
+    color: $button-text-active;
+  }
+}
