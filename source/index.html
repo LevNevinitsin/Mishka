@@ -3,59 +3,82 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин «Мишка»</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
 
     <header class="page-header">
-      <div class="page-header__wrapper"> <!-- Центрируется весь header, включая логотип -->
-        <a class="logo"> <!-- Блок, потому что на планшетной и десктопной версиях логотип будет ещё в футере -->
+      <div class="page-header__wrapper">
+        <a class="logo">
           <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
         </a>
-        <nav class="main-navigation">
-          <h2 class="visually-hidden">Навигация по разделам сайта</h2>
-          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <ul class="main-navigation__list">
-            <li class="main-navigation__item">
-              <a href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="main-navigation__item">
-              <a href="form.html">Вязание на заказ</a> <!-- Так до конца и не понял, почему тут не нужен класс. Ну, вероятно, пойму, когда дело до CSS дойдет  -->
-            </li>
-            <li class="main-navigation__item main-navigation__item--search"> <!-- Добавил модификатор, т.к. пункт декорируется иконкой -->
-              <a href="blank.html">Поиск по сайту</a>
-            </li>
-            <li class="main-navigation__item main-navigation__item--cart"> <!-- Добавил модификатор, т.к. пункт декорируется иконкой -->
-              <a href="blank.html">Корзина: пока пуста</a>
-            </li>
-            <li class="main-navigation__item main-navigation__item--additional"> <!-- Этот пункт есть только в десктопной версии -->
-              <a href="blank.html">Новые поступления</a>
-            </li>
-            <li class="main-navigation__item main-navigation__item--additional"> <!-- Этот пункт есть только в десктопной версии -->
-              <a href="blank.html">Распродажа</a>
-            </li>
-          </ul>
-        </nav>
-        <p class="page-header__shipping">Бесплатная доставка по России</p>
       </div>
+      <nav class="main-navigation">
+        <h2 class="visually-hidden">Навигация по разделам сайта</h2>
+        <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item">
+            <div class="main-navigation__wrapper">
+              <!-- Моя логика: в мобильной версии у каждого пункта меню есть нижняя граница, которая тянется на всю ширину экрана.
+              Значит, нам нужно контейнеры-центровщики располагать внутри каждого отдельного li -->
+              <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
+            </div>
+          </li>
+          <li class="main-navigation__item">
+            <div class="main-navigation__wrapper">
+              <a class="main-navigation__link" href="form.html">Вязание на заказ</a>
+            </div>
+          </li>
+          <li class="main-navigation__item main-navigation__item--search">
+            <div class="main-navigation__wrapper">
+              <a class="main-navigation__link" href="blank.html">Поиск по сайту</a>
+            </div>
+          </li>
+          <li class="main-navigation__item main-navigation__item--cart">
+            <div class="main-navigation__wrapper">
+              <a class="main-navigation__link" href="blank.html">Корзина: пока пуста</a>
+            </div>
+          </li>
+          <li class="main-navigation__item main-navigation__item--additional"> <!-- Этот пункт есть только в десктопной версии -->
+            <a class="main-navigation__link" href="blank.html">Новые поступления</a>
+          </li>
+          <li class="main-navigation__item main-navigation__item--additional"> <!-- Этот пункт есть только в десктопной версии -->
+            <a class="main-navigation__link" href="blank.html">Распродажа</a>
+          </li>
+        </ul>
+      </nav>
+      <p class="page-header__shipping">Бесплатная доставка по России</p>
     </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">«Мишка» - интернет-магазин игрушек ручной работы</h1>
-      <img src="https://via.placeholder.com/320x282" width="320" height="282" alt="Игрушки ручной работы"> <!-- На фоновой картинке изображен сам продукт, поэтому разметил как контент -->
-      <p class="page-main__title">Милые штуки ручной работы для дома</p>
-      <nav class="sub-navigation"> <!-- Эта навигация размечена в main, а не в header, потому что на других страницах её нет -->
+      <div class="page-main__holder">
+        <img class="page-main__background" src="img/page-main__background.jpg" width="320" height="282" alt="Игрушки ручной работы">
+        <!-- На фоновой картинке изображен сам продукт, поэтому разметил как контент -->
+        <p class="page-main__title">Милые штуки ручной работы&nbsp;для дома</p>
+      </div>
+      <nav class="sub-navigation">
         <h2 class="visually-hidden">Навигация по продукции по типу товара</h2>
         <ul class="sub-navigation__list">
-          <li class="sub-navigation__item sub-navigation__item--home-decor">
-            <a href="blank.html">
-              Предметы<br>
-              интерьера
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link sub-navigation__link--home-decor" href="blank.html">
+              <div class="sub-navigation__wrapper">
+                Предметы<br>
+                интерьера
+              </div>
+              <!-- Моя логика: div внутри <a>, потому что наша задача поместить в контейнер только текст, ведь ссылкой должен быть весь блок.
+              Судя по макету, в данном случае блок это всё, что ограничено фоновым цветом.
+              Этот цвет упирается в края макета мобильной версии, значит должен тянуться на всю ширину (пункт 3.2. ТЗ).
+              Следовательно, и весь блок-ссылка растягивается таким же образом.
+              Сам результат в браузере выглядит немного странно, на мой взгляд. -->
             </a>
           </li>
-          <li class="sub-navigation__item sub-navigation__item--childrens-toys">
-            <a href="blank.html">
-              Детские<br>
-              игрушки
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link sub-navigation__link--children-toys" href="blank.html">
+              <div class="sub-navigation__wrapper">
+                Детские<br>
+                игрушки
+              </div>
             </a>
           </li>
         </ul>
@@ -72,7 +95,7 @@
           </p>
           <dl class="featured__list">
             <div class="featured__item">
-              <dt class="featured__characteristic">Цвет:</dt> <!-- Слово characteristic какое-то сложное слишком, но не знаю чем попроще заменить -->
+              <dt class="featured__characteristic">Цвет:</dt>
               <dd class="featured__value">«Тиффани»/серый</dd>
             </div>
             <div class="featured__item">
@@ -84,10 +107,10 @@
               <dd class="featured__value">15 см</dd>
             </div>
           </dl>
-        </div>
-        <img src="https://via.placeholder.com/260x315" width="260" height="315" alt="Три вязаные корзинки трех разных размеров в двух расцветках">
+        <img class="featured__image" src="https://via.placeholder.com/260x315" width="260" height="315" alt="Три вязаные корзинки трех разных размеров в двух расцветках">
         <p class="featured__price">Цена: 990 руб.</p>
         <a class="featured__order button" href="blank.html">Заказать</a>
+        </div>
       </section>
 
       <section class="advantages">
@@ -108,13 +131,16 @@
               на фотографиях
             </li>
             <li class="advantages__item advantages__item--hand-made">
-              Связано вручную с любовью и умилением
+              Связано вручную<br>
+              с любовью и умилением
             </li>
             <li class="advantages__item advantages__item--native-support">
-              Поддержка отечественного производителя
+              Поддержка отечественного<br>
+              производителя
             </li>
             <li class="advantages__item advantages__item--gift-pack">
-              Поставляется в подарочной упаковке
+              Поставляется<br>
+              в подарочной упаковке
             </li>
           </ul>
         </div>
@@ -125,7 +151,7 @@
           <h2 class="reviews__title">Отзывы</h2>
           <ul class="reviews__list slider__list">
             <li class="reviews__item slider__item">
-              <blockquote>
+              <blockquote class="reviews__blockquote">
                 <p class="reviews__text">
                   Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
                   как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
@@ -138,7 +164,7 @@
               </blockquote>
             </li>
             <li class="reviews__item slider__item">
-              <blockquote>
+              <blockquote class="reviews__blockquote">
                 <p class="reviews__text">
                   Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков,
                   как у популярных инстамамочек. В отчаянии, я накупила аксессуарови игрушек в Мишке,
@@ -150,8 +176,8 @@
                 </cite>
               </blockquote>
             </li>
-            <li class="reviews__item slider__item"> <!-- Сделал три пункта, т.к. всё равно планирую реализовывать слайдер -->
-              <blockquote>
+            <li class="reviews__item slider__item">
+              <blockquote class="reviews__blockquote">
                 <p class="reviews__text">
                   Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков,
                   как у популярных инстамамочек. В отчаянии, я накупила аксессуарови игрушек в Мишке,
@@ -171,23 +197,25 @@
       </section>
 
       <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <dl class="contacts__list">
-          <div class="contacts__item">
-            <dt class="contacts__type">e-mail:</dt>
-            <dd class="contacts__adress">
-              <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-            </dd>
-          </div>
-          <div class="contacts__item">
-            <dt class="contacts__type">адрес:</dt>
-            <dd class="contacts__adress">
-              г. Санкт-Петербург<br>
-              ул. Большая Конюшенная<br>
-              д. 19/8, офис 101</dd>
-          </div>
-        </dl>
-        <img src="https://via.placeholder.com/320x454" width="320" height="454" alt="Местоположение магазина на карте">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Контакты</h2>
+          <dl class="contacts__list">
+            <div class="contacts__item">
+              <dt class="contacts__type">e-mail:</dt>
+              <dd class="contacts__adress">
+                <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              </dd>
+            </div>
+            <div class="contacts__item">
+              <dt class="contacts__type">адрес:</dt>
+              <dd class="contacts__adress">
+                г. Санкт-Петербург<br>
+                ул. Большая Конюшенная<br>
+                д. 19/8, офис 101</dd>
+            </div>
+          </dl>
+        </div>
+        <img class="contacts__map" src="https://via.placeholder.com/320x454" width="320" height="454" alt="Местоположение магазина на карте">
         <a class="contacts__write button" href="blank.html">Напишите нам</a>
       </section>
     </main>
@@ -195,8 +223,8 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <a class="logo logo--bottom"> <!-- Логотип в футере есть в планшетной и десктопной версиях и визуально он отличается от логотипа в шапке -->
-            <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»"> <!-- Опять же, не до конца понимаю, нужен ли тут класс -->
+          <a class="logo logo--bottom">
+            <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
           </a>
         </div>
         <div class="page-footer__social social">
@@ -216,41 +244,42 @@
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">HTML Academy</span>
-            <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
+            <img class="copyright__logo" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
           </a>
         </div>
       </div>
     </footer>
 
+
     <section class="modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <form class="modal__form-size">  <!-- Сделал форму, т.к. на лекции говорилось, что радио-кнопки это элементы формы -->
-        <fieldset class="modal__field-group">
-          <legend class="modal__legend">Выберите размер:</legend>
-          <ul class="modal__list">
-            <li class="modal__item">
-              <label class="modal__label modal__label--active">
-                <input class="modal__radio" type="radio" name="size" value="S" checked>S
-              </label>
-            </li>
-            <li class="modal__item">
-              <label class="modal__label">
-                <input class="modal__radio" type="radio" name="size" value="M">M
-              </label>
-            </li>
-            <li class="modal__item">
-              <label class="modal__label">
-                <input class="modal__radio" type="radio" name="size" value="L">L
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="modal__add" type="button">Добавить</button>
-        <!-- Хоть в ТЗ это и не указано, можно предположить, что кнопка "Добавить" добавляет товар в корзину.
-        Куда принято направлять данные в этом случае в реальных проектах: на сервер
-        или в local storage в браузере? Предполагаю, что в local storage. -->
-      </form>
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+        <form class="modal__form-size">
+          <fieldset class="modal__field-group">
+            <legend class="modal__legend">Выберите размер:</legend>
+            <ul class="modal__list">
+              <li class="modal__item">
+                <label class="modal__label modal__label--active">
+                  <input class="modal__radio" type="radio" name="size" value="S" checked>S
+                </label>
+              </li>
+              <li class="modal__item">
+                <label class="modal__label">
+                  <input class="modal__radio" type="radio" name="size" value="M">M
+                </label>
+              </li>
+              <li class="modal__item">
+                <label class="modal__label">
+                  <input class="modal__radio" type="radio" name="size" value="L">L
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="modal__add" type="button">Добавить</button>
+        </form>
+      </div>
     </section>
+
 
   </body>
 </html>

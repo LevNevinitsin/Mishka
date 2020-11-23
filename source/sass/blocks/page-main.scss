@@ -1,0 +1,23 @@
+.page-main__holder {
+  position: relative;
+  background-color: $holder-background;
+}
+
+
+.page-main__background {
+  display: block;
+  margin: 0 auto;
+}
+
+.page-main__title {
+  position: absolute;
+  top: 72px;
+  left: 50%;
+  margin: 0 auto;
+  width: 260px;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  transform: translateX(-50%);
+}
