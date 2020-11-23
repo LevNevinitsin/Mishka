@@ -1,8 +1,13 @@
 .page-main__holder {
   position: relative;
-  background-color: $holder-background;
-}
+  background-color: $holder-background-index;
 
+  &--form {
+    margin-bottom: 17px;
+    padding: 73px 0 74px;
+    background-color: $holder-background-form;
+  }
+}
 
 .page-main__background {
   display: block;
@@ -10,14 +15,27 @@
 }
 
 .page-main__title {
-  position: absolute;
-  top: 72px;
-  left: 50%;
-  margin: 0 auto;
   width: 260px;
+  margin: 0 auto;
   font-size: 27px;
   line-height: 30px;
   font-weight: bold;
   text-align: center;
-  transform: translateX(-50%);
+  overflow-wrap: break-word;
+
+  &--index {
+    position: absolute;
+    top: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.page-main__lead {
+  margin: 0 auto 14px;
+  width: 260px;
+  font-size: 13px;
+  line-height: 24px;
+  color: $lead;
+  overflow-wrap: break-word;
 }

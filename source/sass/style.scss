@@ -3,6 +3,7 @@
 @import "variables.scss";
 @import "global.scss";
 @import "fonts.scss";
+@import "mixins.scss";
 
 //Blocks
 
@@ -23,3 +24,4 @@
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
 @import "blocks/modal.scss";
+@import "blocks/order.scss";
