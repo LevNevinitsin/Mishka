@@ -1,0 +1,120 @@
+.process {
+  width: 260px;
+  // padding-bottom:
+}
+
+.process__title {
+  position: relative;
+  margin: 0;
+  padding: 21px 12px 26px 90px;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  border: 1px solid $process-border;
+  border-bottom: none;
+  overflow-wrap: break-word;
+
+  &::before {
+    position: absolute;
+    top: 45%;
+    left: 34px;
+    content: "";
+    width: 32px;
+    height: 22px;
+    background-color: $add-example; // пока просто для отображения
+    transform: translateY(-45%);
+  }
+
+  // для тени
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  }
+}
+
+.process:hover > .process__title::after {
+  box-shadow: 0 6px 10px $process-item-shadow;
+}
+
+.process:active > .process__title::after {
+  box-shadow: 0 3px 5px $process-item-shadow;
+}
+
+.process__heading {
+  position: relative;
+  z-index: 1;
+}
+
+.process__holder {
+  position: relative;
+}
+
+.process__image {
+  display: block;
+}
+
+.process__start {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 101px;
+  height: 77px;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.3;
+  }
+}
+
+.process__box {
+  position: relative;
+  padding: 35px 12px 32px 33px;
+  border: 1px solid $process-border;
+  border-top: none;
+
+  // для тени
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  }
+}
+
+.process:hover > .process__box::after {
+  box-shadow: 0 6px 10px $process-item-shadow;
+}
+
+.process:active > .process__box::after {
+  box-shadow: 0 3px 5px $process-item-shadow;
+}
+
+.process__text {
+  position: relative;
+  margin: 0 0 41px;
+  font-size: 13px;
+  line-height: 24px;
+  color: $process-text;
+  overflow-wrap: break-word;
+  z-index: 1;
+}
+
+.process__order {
+  position: relative;
+  display: block;
+  z-index: 1;
+}
