@@ -1,6 +1,7 @@
 .button {
   padding: 14px;
   width: 260px;
+  font-family: inherit;
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
@@ -9,6 +10,14 @@
   text-transform: uppercase;
   text-decoration: none;
   border: 2px solid $button-border;
+  background: $button-background;
+  overflow-wrap: break-word;
+
+  &--form {
+    padding: 16px;
+    font-size: 17px;
+    line-height: 16px;
+  }
 
   &:hover {
     color: $button-text-hover;
@@ -17,5 +26,9 @@
 
   &:active {
     color: $button-text-active;
+  }
+
+  &:focus {
+    @include focus;
   }
 }
