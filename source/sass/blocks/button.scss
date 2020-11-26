@@ -13,12 +13,6 @@
   background: $button-background;
   overflow-wrap: break-word;
 
-  &--form {
-    padding: 16px;
-    font-size: 17px;
-    line-height: 16px;
-  }
-
   &:hover {
     color: $button-text-hover;
     background-color: $button-background-hover;
@@ -30,5 +24,17 @@
 
   &:focus {
     @include focus;
+  }
+
+  &--form {
+    padding: 16px;
+    font-size: 17px;
+    line-height: 16px;
+  }
+
+  &--process {
+    width: 192px;
+    line-height: 16px;
+    padding: 16px 19px 16px 20px;
   }
 }

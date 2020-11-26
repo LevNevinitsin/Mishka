@@ -1,3 +1,13 @@
+.page-main {
+  &--index {
+    padding-bottom: 39px;
+  }
+
+  &--catalog {
+    padding-bottom: 59px;
+  }
+}
+
 .page-main__holder {
   position: relative;
   background-color: $holder-background-index;
@@ -5,7 +15,7 @@
   &--form {
     margin-bottom: 17px;
     padding: 73px 0 74px;
-    background-color: $holder-background-form;
+    background-color: $holder-background-inner;
   }
 }
 
@@ -38,4 +48,12 @@
   line-height: 24px;
   color: $lead;
   overflow-wrap: break-word;
+}
+
+.page-main__goods {
+  margin-bottom: 30px;
+}
+
+.page-main__process {
+  margin: 0 auto;
 }

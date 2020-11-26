@@ -1,0 +1,161 @@
+// Catalogue
+
+.goods__holder {
+  margin-bottom: 30px;
+  padding: 73px 0 74px;
+  background-color: $holder-background-inner;
+}
+
+.goods__title {
+  max-width: 260px;
+  margin: 0 auto;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.goods__list {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.goods__item {
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &:hover > {
+    .goods__heading,
+    .goods__box {
+      &::after {
+        box-shadow: 0 6px 10px $goods-item-shadow;
+      }
+    }
+  }
+
+  &:active > {
+    .goods__heading,
+    .goods__box {
+      &::after {
+        box-shadow: 0 3px 5px $goods-item-shadow;
+      }
+    }
+  }
+}
+
+.goods__heading {
+  position: relative;
+  margin: 0;
+  padding: 28px 27px 0;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  border: 1px solid $goods-border;
+  border-bottom: none;
+  background-color: $goods-heading-background;
+
+  // для тени
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  }
+
+  &--big {
+    padding-top: 25px;
+  }
+}
+
+.goods__link-text {
+  position: relative;
+  max-width: 204px;
+  color: $goods-heading;
+  overflow-wrap: break-word;
+  z-index: 1;
+
+  &:hover {
+    color: $goods-heading-hover;
+  }
+
+  &:active {
+    color: $goods-heading-active;
+  }
+}
+
+.goods__link-image {
+  order: -1;
+}
+
+.goods__image {
+  display: block;
+}
+
+.goods__box {
+  position: relative;
+  padding: 5px 27px 25px;
+  border: 1px solid $goods-border;
+  border-top: none;
+  background-color: $goods-box-background;
+
+  // для тени
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  }
+
+  &--big {
+    padding-top: 9px;
+  }
+}
+
+.goods__characteristics {
+  position: relative;
+  margin: 0 0 22px;
+  padding: 0 0 17px;
+  font-size: 13px;
+  line-height: 30px;
+  overflow-wrap: break-word;
+  color: $characteristics;
+  border-bottom: 1px solid $goods-border;
+  z-index: 1;
+}
+
+.goods__buy {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: 25px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.goods__price {
+  max-width: 170px;
+  padding-top: 1px;
+  overflow-wrap: break-word;
+}
+
+.goods__add {
+  width: 20px;
+  height: 19px;
+  background-color: $add-example; // пока просто для видимости
+}
