@@ -37,4 +37,28 @@
     line-height: 16px;
     padding: 16px 19px 16px 20px;
   }
+
+  @media (min-width: $tablet-width) {
+    &--featured {
+      width: 292px;
+    }
+
+    &--reviews {
+      width: auto;
+      min-width: 175px;
+      max-width: 330px;
+    }
+
+    &--contacts {
+      width: auto;
+      min-width: 230px;
+      max-width: 600px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--contacts {
+      max-width: 290px;
+    }
+  }
 }

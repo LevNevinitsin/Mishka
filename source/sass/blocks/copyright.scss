@@ -1,4 +1,31 @@
 .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 22px 0 23px;
   text-align: center;
+  overflow-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.copyright__text {
+  width: 128px;
+  margin-right: 27px;
+  font-size: 19px;
+  line-height: 18px;
+  vertical-align: middle;
+}
+
+.copyright__logo {
+  display: block;
+  vertical-align: middle;
+}
+
+.copyright__link {
+  &:focus {
+    @include focus;
+  }
 }

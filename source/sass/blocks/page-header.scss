@@ -1,15 +1,114 @@
 .page-header {
   border-top: 1px solid $body-border;
-}
 
-.page-header__shipping {
-  color: $shipping;
-  font-size: 15px;
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .page-header__wrapper {
-  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template: minmax(88px, auto) auto / 1fr 334px 334px 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template: minmax(88px, auto) auto / 1fr 450px 149px 451px 1fr;
+  }
+}
+
+.page-header__main-navigation {
+  &--hot {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--basic {
+      grid-row: 2 / 3;
+      grid-column: 2 / 3;
+      font-size: 15px;
+      z-index: 2;
+    }
+
+    &--search {
+      grid-row: 1 / 2;
+      grid-column: 2 / 4;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--basic {
+      grid-row: 1 / 2;
+    }
+
+    &--search {
+      grid-column: 4 / 5;
+      justify-content: flex-end;
+    }
+
+    &--hot {
+      display: block;
+      grid-row: 2 / 3;
+      grid-column: 2 / 3;
+      z-index: 2;
+    }
+  }
+}
+
+.page-header__box {
   padding: 22px 0;
-  width: 260px;
-  text-align: center;
+  display: block;
+  width: min-content;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3 / 4;
+    justify-self: center;
+  }
+}
+
+.page-header__shipping {
+  display: none;
+  margin: 0;
+  padding-top: 20px;
+  color: $shipping;
+  font-size: 15px;
+  text-align: right;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    z-index: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 4 / 5;
+  }
+}
+
+.page-header__paint {
+  @media (min-width: $tablet-width) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 5;
+    background: url("../img/header__paint.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-color: $header-background;
+    border-top: 1px solid $navigation-item-border-nomobile;
+    z-index: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 6;
+  }
 }

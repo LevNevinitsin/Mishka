@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интернет-магазин «Мишка»</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -9,80 +10,99 @@
 
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="logo">
-          <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
-        </a>
+        <div class="page-header__box">
+          <a class="page-header__logo logo">
+            <img class="logo__image" src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
+          </a>
+        </div>
+        <button class="main-navigation__toggle main-navigation__toggle--nojs" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <!-- Я переделал навигацию, разбив её на три части. Если посмотреть на макеты планшетной и
+        десктопной версий, то, я думаю, семантически мы можем себе это позволить.
+        Цель переделывания: достижение адаптивности с сохранением возможности любых переполнений. -->
+        <nav class="page-header__main-navigation page-header__main-navigation--basic main-navigation main-navigation--basic">
+          <h2 class="visually-hidden">Навигация по основным разделам сайта</h2>
+          <ul class="main-navigation__list main-navigation__list--basic">
+            <li class="main-navigation__item main-navigation__item--basic">
+              <div class="main-navigation__wrapper main-navigation__wrapper--basic">
+                <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
+              </div>
+            </li>
+            <li class="main-navigation__item main-navigation__item--basic">
+              <div class="main-navigation__wrapper main-navigation__wrapper--basic">
+                <a class="main-navigation__link" href="form.html">Вязание на заказ</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <nav class="page-header__main-navigation page-header__main-navigation--search main-navigation main-navigation--search">
+        <h2 class="visually-hidden">Навигация: поиск и корзина</h2>
+          <div class="main-navigation__wrapper main-navigation__wrapper--search main-navigation__wrapper--lens">
+            <a class="main-navigation__link main-navigation__link--with-icon main-navigation__link--search" href="blank.html">
+              <span class="main-navigation__text">Поиск по сайту</span>
+            </a>
+          </div>
+          <div class="main-navigation__wrapper main-navigation__wrapper--search main-navigation__wrapper--cart">
+            <a class="main-navigation__link main-navigation__link--with-icon main-navigation__link--cart" href="blank.html">Корзина: пока пуста</a>
+          </div>
+        </nav>
+        <nav class="page-header__main-navigation page-header__main-navigation--hot main-navigation main-navigation--hot">
+          <h2 class="visually-hidden">Навигация по разделам с акциями и новинками</h2>
+          <ul class="main-navigation__list main-navigation__list--hot">
+            <li class="main-navigation__item main-navigation__item--additional">
+              <a class="main-navigation__link" href="blank.html">Новые поступления</a>
+            </li>
+            <li class="main-navigation__item main-navigation__item--additional">
+              <a class="main-navigation__link" href="blank.html">Распродажа</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="page-header__shipping">Бесплатная доставка по России</p>
+        <div class="page-header__paint"></div>
       </div>
-      <nav class="main-navigation">
-        <h2 class="visually-hidden">Навигация по разделам сайта</h2>
-        <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-navigation__list">
-          <li class="main-navigation__item">
-            <div class="main-navigation__wrapper">
-              <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
-            </div>
-          </li>
-          <li class="main-navigation__item">
-            <div class="main-navigation__wrapper">
-              <a class="main-navigation__link" href="form.html">Вязание на заказ</a>
-            </div>
-          </li>
-          <li class="main-navigation__item main-navigation__item--search">
-            <div class="main-navigation__wrapper">
-              <a class="main-navigation__link" href="blank.html">Поиск по сайту</a>
-            </div>
-          </li>
-          <li class="main-navigation__item main-navigation__item--cart">
-            <div class="main-navigation__wrapper">
-              <a class="main-navigation__link" href="blank.html">Корзина: пока пуста</a>
-            </div>
-          </li>
-          <li class="main-navigation__item main-navigation__item--additional"> <!-- Этот пункт есть только в десктопной версии -->
-            <a class="main-navigation__link" href="blank.html">Новые поступления</a>
-          </li>
-          <li class="main-navigation__item main-navigation__item--additional"> <!-- Этот пункт есть только в десктопной версии -->
-            <a class="main-navigation__link" href="blank.html">Распродажа</a>
-          </li>
-        </ul>
-      </nav>
-      <p class="page-header__shipping">Бесплатная доставка по России</p>
     </header>
 
     <main class="page-main page-main--index">
       <h1 class="visually-hidden">«Мишка» - интернет-магазин игрушек ручной работы</h1>
-      <div class="page-main__holder">
-        <img class="page-main__background" src="img/page-main__background.jpg" width="320" height="282" alt="Игрушки ручной работы">
-        <!-- На фоновой картинке изображен сам продукт, поэтому разметил как контент -->
-        <p class="page-main__title page-main__title--index">Милые штуки ручной работы&nbsp;для дома</p>
+      <div class="page-main__wrap">
+        <div class="page-main__holder">
+          <picture class="page-main__box">
+            <source media="(min-width: 768px)" srcset="img/page-main__background_big.jpg">
+            <img class="page-main__background" src="img/page-main__background.jpg" width="575" height="355" alt="Игрушки ручной работы">
+          </picture>
+          <p class="page-main__title page-main__title--index">
+            Милые штуки ручной&nbsp;<br>
+            <!-- На макете после слова "ручной" есть пробел и сразу идет перенос.
+            Я не придумал, как это лучше в HTML сделать. Может быть как-то можно? -->
+            работы&nbsp;для дома
+          </p>
+          <nav class="page-main__sub-navigation sub-navigation">
+            <h2 class="visually-hidden">Навигация по продукции по типу товара</h2>
+            <ul class="sub-navigation__list">
+              <li class="sub-navigation__item">
+                <a class="sub-navigation__link sub-navigation__link--home-decor" href="blank.html">
+                  <div class="sub-navigation__wrapper">
+                    Предметы<br>
+                    интерьера
+                  </div>
+                </a>
+              </li>
+              <li class="sub-navigation__item">
+                <a class="sub-navigation__link sub-navigation__link--children-toys" href="blank.html">
+                  <div class="sub-navigation__wrapper">
+                    Детские<br>
+                    игрушки
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="page-main__waves"></div>
       </div>
-      <nav class="sub-navigation">
-        <h2 class="visually-hidden">Навигация по продукции по типу товара</h2>
-        <ul class="sub-navigation__list">
-          <li class="sub-navigation__item">
-            <a class="sub-navigation__link sub-navigation__link--home-decor" href="blank.html">
-              <div class="sub-navigation__wrapper">
-                Предметы<br>
-                интерьера
-              </div>
-              <!-- Моя логика: div внутри <a>, потому что наша задача поместить в контейнер только текст, ведь ссылкой должен быть весь блок.
-              Судя по макету, в данном случае блок это всё, что ограничено фоновым цветом.
-              Этот цвет упирается в края макета мобильной версии, значит должен тянуться на всю ширину (пункт 3.2. ТЗ).
-              Следовательно, и весь блок-ссылка растягивается таким же образом.
-              Сам результат в браузере выглядит немного странно, на мой взгляд. -->
-            </a>
-          </li>
-          <li class="sub-navigation__item">
-            <a class="sub-navigation__link sub-navigation__link--children-toys" href="blank.html">
-              <div class="sub-navigation__wrapper">
-                Детские<br>
-                игрушки
-              </div>
-            </a>
-          </li>
-        </ul>
-      </nav>
 
-      <section class="featured">
+      <section class="page-main__featured featured">
         <div class="featued__wrapper">
           <h2 class="featured__title">Товар недели</h2>
           <h3 class="featured__subtitle">Вязаные корзинки</h3>
@@ -105,13 +125,17 @@
               <dd class="featured__value">15 см</dd>
             </div>
           </dl>
-        <img class="featured__image" src="https://via.placeholder.com/260x315" width="260" height="315" alt="Три вязаные корзинки трех разных размеров в двух расцветках">
-        <p class="featured__price">Цена: 990 руб.</p>
-        <a class="featured__order button" href="blank.html">Заказать</a>
+          <picture class="featured__image">
+            <source media="(min-width: 1150px)" srcset="https://via.placeholder.com/525x636">
+            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/334x404">
+            <img class="featured__picture" src="https://via.placeholder.com/260x315" width="260" height="315" alt="Три вязаные корзинки трех разных размеров в двух расцветках">
+          </picture>
+          <p class="featured__price">Цена: 990 руб.</p>
+          <a class="featured__order button button--featured" href="blank.html">Заказать</a>
         </div>
       </section>
 
-      <section class="advantages">
+      <section class="page-main__advantages advantages">
         <div class="advantages__wrapper">
           <h2 class="visually-hidden">Наши преимущества</h2>
           <p class="advantages__title">Коротко о нас:</p>
@@ -144,19 +168,20 @@
         </div>
       </section>
 
-      <section class="reviews">
+      <section class="page-main__reviews reviews">
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title">Отзывы</h2>
+          <img class="reviews__image" src="/img/review_bg.jpg" width="350" height="457" alt="Правая часть вязаной подложки круглой формы белого цвета">
           <ul class="reviews__list slider__list">
-            <li class="reviews__item slider__item">
+            <li class="reviews__item slider__item slider__item--active">
               <blockquote class="reviews__blockquote">
                 <p class="reviews__text">
                   Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
                   как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
                   и мои фотографии сразу стали более стильными, а также набирают больше лайков!
                 </p>
-                <cite>
-                  <span class="reviews__author">Анастасия Красильникова</span><br>
+                <cite class="reviews__cite">
+                  <span class="reviews__author">Анастасия Красильникова</span>
                   <span class="reviews__social">@misssssiskras</span>
                 </cite>
               </blockquote>
@@ -169,7 +194,7 @@
                   и мои фотографии сразу стали более стильными, а также набирают больше лайков!
                 </p>
                 <cite>
-                  <span class="reviews__author">Екатерина Красильникова</span><br>
+                  <span class="reviews__author">Екатерина Красильникова</span>
                   <span class="reviews__social">@misssssiskras2</span>
                 </cite>
               </blockquote>
@@ -182,19 +207,21 @@
                   и мои фотографии сразу стали более стильными, а также набирают больше лайков!
                 </p>
                 <cite>
-                  <span class="reviews__author">Елена Красильникова</span><br>
+                  <span class="reviews__author">Елена Красильникова</span>
                   <span class="reviews__social">@misssssiskras3</span>
                 </cite>
               </blockquote>
             </li>
           </ul>
-          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__next" type="button">Следующий отзыв</button>
-          <a class="reviews__write button" href="blank.html">Написать</a>
+          <div class="reviews__box">
+            <button class="reviews__toggle reviews__toggle--prev" type="button" aria-label="Предыдущий отзыв"></button>
+            <button class="reviews__toggle reviews__toggle--next" type="button" aria-label="Следующий отзыв"></button>
+          </div>
+          <a class="reviews__write button button--reviews" href="blank.html">Написать</a>
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="page-main__contacts contacts">
         <div class="contacts__wrapper">
           <h2 class="contacts__title">Контакты</h2>
           <dl class="contacts__list">
@@ -212,9 +239,13 @@
                 д. 19/8, офис 101</dd>
             </div>
           </dl>
+          <picture class="contacts__map">
+            <source media="(min-width: 1150px)" srcset="https://via.placeholder.com/527x457">
+            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/1149x457">
+            <img class="contacts__picture" src="https://via.placeholder.com/767x454" width="767" height="454" alt="Местоположение магазина на карте">
+          </picture>
+          <a class="contacts__write button button--contacts" href="blank.html">Напишите нам</a>
         </div>
-        <img class="contacts__map" src="https://via.placeholder.com/320x454" width="320" height="454" alt="Местоположение магазина на карте">
-        <a class="contacts__write button" href="blank.html">Напишите нам</a>
       </section>
     </main>
 
@@ -222,19 +253,19 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <a class="logo logo--bottom">
-            <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
+            <img class="logo__image" src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
           </a>
         </div>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+              <a class="social__link social__link--instagram" href="#" aria-label="Наш инстаграм"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="#" aria-label="Наш фейсбук"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="#">Мы в Твиттере</a>
+              <a class="social__link social__link--twitter" href="#" aria-label="Наш твиттер"></a>
             </li>
           </ul>
         </div>
@@ -249,7 +280,7 @@
     </footer>
 
 
-    <section class="modal">
+    <section class="page__modal modal">
       <div class="modal__wrapper">
         <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
         <form class="modal__form-size">
@@ -257,18 +288,21 @@
             <legend class="modal__legend">Выберите размер:</legend>
             <ul class="modal__list">
               <li class="modal__item">
-                <label class="modal__label modal__label--active">
-                  <input class="modal__radio" type="radio" name="size" value="S" checked>S
+                <label class="modal__label modal__label--selected">
+                  <input class="modal__radio visually-hidden" type="radio" name="size" value="S" checked aria-label="Выбрать размер S">
+                  <span class="modal__text modal__text--selected"><span class="modal__breaker">S</span></span>
                 </label>
               </li>
               <li class="modal__item">
                 <label class="modal__label">
-                  <input class="modal__radio" type="radio" name="size" value="M">M
+                  <input class="modal__radio visually-hidden" type="radio" name="size" value="M" aria-label="Выбрать размер M">
+                  <span class="modal__text">M</span>
                 </label>
               </li>
               <li class="modal__item">
                 <label class="modal__label">
-                  <input class="modal__radio" type="radio" name="size" value="L">L
+                  <input class="modal__radio visually-hidden" type="radio" name="size" value="L" aria-label="Выбрать размер L">
+                  <span class="modal__text">L</span>
                 </label>
               </li>
             </ul>

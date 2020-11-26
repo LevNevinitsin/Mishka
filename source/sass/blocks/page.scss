@@ -1,4 +1,11 @@
 .page__body {
+  min-width: 320px;
   margin: 0;
   font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.page__modal {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
 }
