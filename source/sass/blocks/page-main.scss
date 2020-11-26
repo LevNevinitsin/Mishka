@@ -1,9 +1,11 @@
-.page-main--index {
-  padding-bottom: 39px;
-}
+.page-main {
+  &--index {
+    padding-bottom: 39px;
+  }
 
-.page-main--catalog {
-  padding-bottom: 59px;
+  &--catalog {
+    padding-bottom: 59px;
+  }
 }
 
 .page-main__holder {

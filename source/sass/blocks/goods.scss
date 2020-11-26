@@ -30,6 +30,24 @@
   &:not(:last-child) {
     margin-bottom: 30px;
   }
+
+  &:hover > {
+    .goods__heading,
+    .goods__box {
+      &::after {
+        box-shadow: 0 6px 10px $goods-item-shadow;
+      }
+    }
+  }
+
+  &:active > {
+    .goods__heading,
+    .goods__box {
+      &::after {
+        box-shadow: 0 3px 5px $goods-item-shadow;
+      }
+    }
+  }
 }
 
 .goods__heading {
@@ -57,14 +75,6 @@
   &--big {
     padding-top: 25px;
   }
-}
-
-.goods__item:hover > .goods__heading::after {
-  box-shadow: 0 6px 10px $goods-item-shadow;
-}
-
-.goods__item:active > .goods__heading::after {
-  box-shadow: 0 3px 5px $goods-item-shadow;
 }
 
 .goods__link-text {
@@ -112,14 +122,6 @@
   &--big {
     padding-top: 9px;
   }
-}
-
-.goods__item:hover > .goods__box::after {
-  box-shadow: 0 6px 10px $goods-item-shadow;
-}
-
-.goods__item:active > .goods__box::after {
-  box-shadow: 0 3px 5px $goods-item-shadow;
 }
 
 .goods__characteristics {
