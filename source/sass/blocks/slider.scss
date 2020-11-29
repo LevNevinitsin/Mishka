@@ -1,1 +1,7 @@
-//empty
+.slider__item {
+  display: none; // временно скрыл два слайда до начала реализации слайдера
+
+  &--active {
+    display: block;
+  }
+}

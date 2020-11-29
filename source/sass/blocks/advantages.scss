@@ -1,10 +1,28 @@
 .advantages {
   padding: 31px 0 29px;
+  overflow-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    padding: 55px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    padding: 68px 175px 0;
+  }
 }
 
 .advantages__wrapper {
   margin: 0 auto;
   width: 260px;
+
+  @media (min-width: $tablet-width) {
+    width: 668px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
 }
 
 .advantages__title {
@@ -12,16 +30,93 @@
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .advantages__list {
+  margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages__item {
-  padding-top: 82px;
+  margin-bottom: 20px;
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    width: calc(50% - 20px);
+    font-size: 20px;
+    line-height: 22px;
+
+    // это больше для себя: даем отступ вправо первым трем, далее - каждому нечетному, начиная с седьмого.
+
+    &:nth-child(-n+3) {
+      margin-right: 20px;
+    }
+
+    &:not(:nth-child(-n+6)):nth-child(odd) {
+      margin-right: 20px;
+    }
+
+    // отступ вниз: убираем у третьего, если он входит в число последних четырех и у шестого, если он является последним,
+    // и, начиная с седьмого, у последних двух.
+
+    &:nth-child(3):nth-last-child(-n+4),
+    &:nth-child(6):last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(-n+7):nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+
+    &--scandinavian {
+      order: 3;
+    }
+
+    &--more-likes {
+      order: 5;
+    }
+
+    &--hand-made {
+      order: 2;
+    }
+
+    &--native-support {
+      order: 4;
+    }
+
+    &--gift-pack {
+      order: 6;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 33px;
+    height: 33px;
+    margin-bottom: 20px;
+    background-image: url("https://via.placeholder.com/33x33");
+  }
 }
