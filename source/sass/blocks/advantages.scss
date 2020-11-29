@@ -3,13 +3,11 @@
   overflow-wrap: break-word;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 83px;
     padding: 55px 0 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 1050px;
-    margin-bottom: 90px;
     padding: 68px 175px 0;
   }
 }

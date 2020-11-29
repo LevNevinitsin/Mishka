@@ -135,8 +135,17 @@
   position: relative;
 }
 
+.page-main__advantages {
+  @media (min-width: $tablet-width) {
+    margin: 0 0 83px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto 90px;
+  }
+}
+
 .page-main__featured,
-.page-main__advantages,
 .page-main__reviews,
 .page-main__contacts {
   @media (min-width: $desktop-width) {
