@@ -63,6 +63,7 @@
   display: block;
   width: min-content;
   margin: 0 auto;
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
     grid-row: 1 / 2;
@@ -100,12 +101,17 @@
   @media (min-width: $tablet-width) {
     grid-row: 2 / 3;
     grid-column: 1 / 5;
-    background: url("../img/header__paint.jpg");
+    background-color: $header-background;
+    background-image: url("../img/header_paint.jpg");
     background-position: 50%;
     background-repeat: no-repeat;
-    background-color: $header-background;
     border-top: 1px solid $navigation-item-border-nomobile;
     z-index: 0;
+
+    &--inner {
+      background-color: $header-background-inner;
+      background-image: none;
+    }
   }
 
   @media (min-width: $tablet-width) {
