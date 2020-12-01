@@ -2,7 +2,19 @@
   overflow-wrap: break-word;
 
   &--catalog {
-    padding-bottom: 59px;
+    padding-bottom: 58px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--catalog {
+      padding-bottom: 64px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--catalog {
+      padding-bottom: 105px;
+    }
   }
 }
 
@@ -126,7 +138,7 @@
 
 .page-main__waves {
   height: 24px;
-  background: url("../img/wave_big.svg");
+  background-image: url("../img/wave_big.svg");
   background-position: 50%;
   background-repeat: repeat-x;
 
@@ -137,10 +149,18 @@
     z-index: 3;
   }
 
-  &--inner {
+  &--form,
+  &--catalogue {
     width: 100%;
-    margin-bottom: 54px;
     background-color: $waves-background-inner;
+  }
+
+  &--form {
+    margin-bottom: 54px;
+  }
+
+  &--catalogue {
+    margin-bottom: 67px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -149,13 +169,14 @@
 
   @media (min-width: $desktop-width) {
     height: 34px;
-    background: url("../img/wave_big_desktop.svg");
-    background-position: 50%;
-    background-repeat: repeat-x;
+    background-image: url("../img/wave_big_desktop.svg");
 
-    &--inner {
+    &--form {
       margin-bottom: 98px;
-      background-color: $waves-background-inner;
+    }
+
+    &--catalogue {
+      margin-bottom: 111px;
     }
   }
 }
@@ -205,6 +226,14 @@
 
 .page-main__goods {
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .page-main__process {

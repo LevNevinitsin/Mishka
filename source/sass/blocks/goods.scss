@@ -4,6 +4,10 @@
   margin-bottom: 30px;
   padding: 73px 0 74px;
   background-color: $holder-background-inner;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .goods__title {
@@ -13,7 +17,19 @@
   line-height: 30px;
   font-weight: bold;
   text-align: center;
-  overflow-wrap: break-word;
+
+
+  @media (min-width: $tablet-width) {
+    max-width: 668px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 700px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .goods__list {
@@ -21,14 +37,26 @@
   margin: 0 auto;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    width: 668px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    width: 1050px;
+  }
 }
 
 .goods__item {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
   }
 
   &:hover > {
@@ -48,12 +76,29 @@
       }
     }
   }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template: auto 1fr / 1fr 1fr;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template: auto auto 1fr / auto;
+    width: 316px;
+    min-height: 659px;
+    margin: 0 51px 0 0;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
 }
 
 .goods__heading {
   position: relative;
   margin: 0;
-  padding: 28px 27px 0;
+  padding: 28px 27px 3px;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
@@ -69,11 +114,26 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 0;
+    z-index: -1;
   }
 
   &--big {
     padding-top: 25px;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    padding: 26px 32px 3px 33px;
+    font-size: 20px;
+    border-left: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    padding: 26px 31px 3px 27px;
+    border-left: 1px solid $goods-border;
   }
 }
 
@@ -81,8 +141,6 @@
   position: relative;
   max-width: 204px;
   color: $goods-heading;
-  overflow-wrap: break-word;
-  z-index: 1;
 
   &:hover {
     color: $goods-heading-hover;
@@ -91,19 +149,56 @@
   &:active {
     color: $goods-heading-active;
   }
+
+  &:focus {
+    @include focus;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: max-content;
+    max-width: 262px;
+  }
 }
 
 .goods__link-image {
   order: -1;
+
+  &:focus {
+    @include focus(3px);
+
+    z-index: 2;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
 }
 
 .goods__image {
   display: block;
+  object-fit: contain;
+
+  @media (min-width: $tablet-width) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 316px;
+    height: 462px;
+  }
 }
 
 .goods__box {
   position: relative;
-  padding: 5px 27px 25px;
+  padding: 2px 27px 0;
   border: 1px solid $goods-border;
   border-top: none;
   background-color: $goods-box-background;
@@ -116,24 +211,51 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 0;
+    z-index: -1;
   }
 
   &--big {
-    padding-top: 9px;
+    padding-top: 6px;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    padding: 4px 33px 0 33px;
+    border-left: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    padding: 3px 31px 0 27px;
+    border-left: 1px solid $goods-border;
   }
 }
 
 .goods__characteristics {
   position: relative;
-  margin: 0 0 22px;
+  margin: 0;
   padding: 0 0 17px;
   font-size: 13px;
   line-height: 30px;
-  overflow-wrap: break-word;
   color: $characteristics;
   border-bottom: 1px solid $goods-border;
-  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    max-width: 262px;
+    font-size: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
+    max-width: 262px;
+    padding: 0 0 13px;
+    font-size: 15px;
+  }
 }
 
 .goods__buy {
@@ -142,20 +264,28 @@
   justify-content: space-between;
   min-height: 25px;
   margin: 0;
+  padding: 22px 0 25px;
   font-size: 15px;
   line-height: 24px;
   font-weight: bold;
-  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    padding: 23px 0 25px;
+  }
 }
 
 .goods__price {
   max-width: 170px;
   padding-top: 1px;
-  overflow-wrap: break-word;
 }
 
 .goods__add {
   width: 20px;
   height: 19px;
   background-color: $add-example; // пока просто для видимости
+
+  &:focus {
+    @include focus;
+  }
 }

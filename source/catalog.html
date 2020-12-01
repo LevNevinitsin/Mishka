@@ -9,43 +9,58 @@
 
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="logo" href="index.html">
-          <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
-        </a>
+        <div class="page-header__box">
+          <a class="page-header__logo logo" href="index.html">
+            <img class="logo__image" src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
+          </a>
+        </div>
+        <button class="main-navigation__toggle main-navigation__toggle--nojs" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <nav class="page-header__main-navigation page-header__main-navigation--basic main-navigation main-navigation--basic">
+          <h2 class="visually-hidden">Навигация по основным разделам сайта</h2>
+          <ul class="main-navigation__list main-navigation__list--basic">
+            <li class="main-navigation__item main-navigation__item--basic">
+              <div class="main-navigation__wrapper main-navigation__wrapper--basic">
+                <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
+              </div>
+            </li>
+            <li class="main-navigation__item main-navigation__item--basic">
+              <div class="main-navigation__wrapper main-navigation__wrapper--basic">
+                <a class="main-navigation__link" href="form.html">Вязание на заказ</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <nav class="page-header__main-navigation page-header__main-navigation--search main-navigation main-navigation--search">
+          <h2 class="visually-hidden">Навигация: поиск и корзина</h2>
+          <div class="main-navigation__item main-navigation__item--search main-navigation__item--lens">
+            <div class="main-navigation__wrapper main-navigation__wrapper--search main-navigation__wrapper--lens">
+              <a class="main-navigation__link main-navigation__link--with-icon main-navigation__link--search" href="blank.html">
+                <span class="main-navigation__text">Поиск по сайту</span>
+              </a>
+            </div>
+          </div>
+          <div class="main-navigation__item main-navigation__item--search main-navigation__item--cart">
+            <div class="main-navigation__wrapper main-navigation__wrapper--search main-navigation__wrapper--cart">
+              <a class="main-navigation__link main-navigation__link--with-icon main-navigation__link--cart" href="blank.html">Корзина: пока пуста</a>
+            </div>
+          </div>
+        </nav>
+        <nav class="page-header__main-navigation page-header__main-navigation--hot main-navigation main-navigation--hot">
+          <h2 class="visually-hidden">Навигация по разделам с акциями и новинками</h2>
+          <ul class="main-navigation__list main-navigation__list--hot">
+            <li class="main-navigation__item main-navigation__item--additional">
+              <a class="main-navigation__link" href="blank.html">Новые поступления</a>
+            </li>
+            <li class="main-navigation__item main-navigation__item--additional">
+              <a class="main-navigation__link" href="blank.html">Распродажа</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="page-header__shipping">Бесплатная доставка по России</p>
+        <div class="page-header__paint page-header__paint--inner"></div>
       </div>
-      <nav class="main-navigation">
-        <h2 class="visually-hidden">Навигация по разделам сайта</h2>
-        <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-navigation__list">
-          <li class="main-navigation__item">
-            <div class="main-navigation__wrapper">
-              <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
-            </div>
-          </li>
-          <li class="main-navigation__item">
-            <div class="main-navigation__wrapper">
-              <a class="main-navigation__link" href="form.html">Вязание на заказ</a>
-            </div>
-          </li>
-          <li class="main-navigation__item main-navigation__item--search">
-            <div class="main-navigation__wrapper">
-              <a class="main-navigation__link" href="blank.html">Поиск по сайту</a>
-            </div>
-          </li>
-          <li class="main-navigation__item main-navigation__item--cart">
-            <div class="main-navigation__wrapper">
-              <a class="main-navigation__link" href="blank.html">Корзина: пока пуста</a>
-            </div>
-          </li>
-          <li class="main-navigation__item main-navigation__item--additional"> <!-- Этот пункт есть только в десктопной версии -->
-            <a class="main-navigation__link" href="blank.html">Новые поступления</a>
-          </li>
-          <li class="main-navigation__item main-navigation__item--additional"> <!-- Этот пункт есть только в десктопной версии -->
-            <a class="main-navigation__link" href="blank.html">Распродажа</a>
-          </li>
-        </ul>
-      </nav>
-      <p class="page-header__shipping">Бесплатная доставка по России</p>
     </header>
 
     <main class="page-main page-main--catalog">
@@ -54,13 +69,18 @@
         <div class="goods__holder">
           <h2 class="goods__title">Каталог товаров</h2>
         </div>
+        <div class="page-main__waves page-main__waves--catalogue"></div>
         <ul class="goods__list">
           <li class="goods__item">
             <h3 class="goods__heading">
               <a class="goods__link-text" href="blank.html">Зайчик-попрыгайчик</a>
             </h3>
             <a class="goods__link-image" href="blank.html">
-              <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Игрушка-заяц">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="https://via.placeholder.com/316x462">
+                <source media="(min-width: 768px)" srcset="https://via.placeholder.com/334x334">
+                <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Игрушка-заяц">
+              </picture>
             </a>
             <div class="goods__box">
               <p class="goods__characteristics">Рост 30 см, вес 200 г</p>
@@ -75,7 +95,11 @@
               <a class="goods__link-text" href="blank.html">Корзинка для белья</a>
             </h3>
             <a class="goods__link-image" href="blank.html">
-              <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Корзинка для белья с поверхностью из бело-оранжевой вязаной ткани с тремя текстильными предметами внутри">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="https://via.placeholder.com/316x462">
+                <source media="(min-width: 768px)" srcset="https://via.placeholder.com/334x334">
+                <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Корзинка для белья с поверхностью из бело-оранжевой вязаной ткани с тремя текстильными предметами внутри">
+              </picture>
             </a>
             <div class="goods__box">
               <p class="goods__characteristics">Диаметр 15 см, высота 10 см</p>
@@ -93,7 +117,11 @@
               </a>
             </h3>
             <a class="goods__link-image" href="blank.html">
-              <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Корзинка для белья с поверхностью из бело-зеленой вязаной ткани с большим количеством игрушек внутри">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="https://via.placeholder.com/316x462">
+                <source media="(min-width: 768px)" srcset="https://via.placeholder.com/334x334">
+                <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Корзинка для белья с поверхностью из бело-зеленой вязаной ткани с большим количеством игрушек внутри">
+              </picture>
             </a>
             <div class="goods__box goods__box--big">
               <p class="goods__characteristics goods__characteristics--big">Диаметр 30 см, высота 30 см</p>
@@ -111,7 +139,11 @@
           <span class="process__heading">Процесс производства</span>
         </h2>
         <div class="process__holder">
-          <img class="process__image" src="https://via.placeholder.com/260x150" width="260" height="150" alt="Один из кадров процесса производства: серо-зеленая корзинка">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="https://via.placeholder.com/683x455">
+            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x455">
+            <img class="process__image" src="https://via.placeholder.com/260x150" width="260" height="150" alt="Один из кадров процесса производства: серо-зеленая корзинка">
+          </picture>
           <button class="process__start" aria-label="Запустить видео"></button>
         </div>
         <div class="process__box">
@@ -126,19 +158,19 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <a class="logo logo--bottom" href="index.html">
-            <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
+            <img class="logo__image" src="https://via.placeholder.com/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
           </a>
         </div>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+              <a class="social__link social__link--instagram" href="#" aria-label="Наш инстаграм"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="#" aria-label="Наш фейсбук"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="#">Мы в Твиттере</a>
+              <a class="social__link social__link--twitter" href="#" aria-label="Наш твиттер"></a>
             </li>
           </ul>
         </div>
@@ -152,31 +184,36 @@
       </div>
     </footer>
 
-    <section class="modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <form class="modal__form-size">  <!-- Сделал форму, т.к. на лекции говорилось, что радио-кнопки это элементы формы -->
-        <fieldset class="modal__field-group">
-          <legend class="modal__legend">Выберите размер:</legend>
-          <ul class="modal__list">
-            <li class="modal__item">
-              <label class="modal__label modal__label--active">
-                <input class="modal__radio" type="radio" name="size" value="S" checked>S
-              </label>
-            </li>
-            <li class="modal__item">
-              <label class="modal__label">
-                <input class="modal__radio" type="radio" name="size" value="M">M
-              </label>
-            </li>
-            <li class="modal__item">
-              <label class="modal__label">
-                <input class="modal__radio" type="radio" name="size" value="L">L
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="modal__add" type="button">Добавить</button>
-      </form>
+    <section class="page__modal modal">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+        <form class="modal__form-size">
+          <fieldset class="modal__field-group">
+            <legend class="modal__legend">Выберите размер:</legend>
+            <ul class="modal__list">
+              <li class="modal__item">
+                <label class="modal__label modal__label--selected">
+                  <input class="modal__radio visually-hidden" type="radio" name="size" value="S" checked aria-label="Выбрать размер S">
+                  <span class="modal__text modal__text--selected"><span class="modal__breaker">S</span></span>
+                </label>
+              </li>
+              <li class="modal__item">
+                <label class="modal__label">
+                  <input class="modal__radio visually-hidden" type="radio" name="size" value="M" aria-label="Выбрать размер M">
+                  <span class="modal__text">M</span>
+                </label>
+              </li>
+              <li class="modal__item">
+                <label class="modal__label">
+                  <input class="modal__radio visually-hidden" type="radio" name="size" value="L" aria-label="Выбрать размер L">
+                  <span class="modal__text">L</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="modal__add" type="button">Добавить</button>
+        </form>
+      </div>
     </section>
 
   </body>

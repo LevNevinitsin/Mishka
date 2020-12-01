@@ -30,10 +30,6 @@
     padding: 16px;
     font-size: 17px;
     line-height: 16px;
-
-    @media (min-width: $tablet-width) {
-      width: 230px;
-    }
   }
 
   &--process {
@@ -58,11 +54,24 @@
       min-width: 230px;
       max-width: 600px;
     }
+
+    &--form {
+      width: 230px;
+    }
+
+    &--process {
+      width: 100%;
+      font-size: 17px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     &--contacts {
       max-width: 290px;
+    }
+
+    &--process {
+      width: 230px;
     }
   }
 }
