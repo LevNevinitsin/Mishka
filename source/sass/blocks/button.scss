@@ -30,6 +30,10 @@
     padding: 16px;
     font-size: 17px;
     line-height: 16px;
+
+    @media (min-width: $tablet-width) {
+      width: 230px;
+    }
   }
 
   &--process {

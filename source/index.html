@@ -37,14 +37,18 @@
           </ul>
         </nav>
         <nav class="page-header__main-navigation page-header__main-navigation--search main-navigation main-navigation--search">
-        <h2 class="visually-hidden">Навигация: поиск и корзина</h2>
-          <div class="main-navigation__wrapper main-navigation__wrapper--search main-navigation__wrapper--lens">
-            <a class="main-navigation__link main-navigation__link--with-icon main-navigation__link--search" href="blank.html">
-              <span class="main-navigation__text">Поиск по сайту</span>
-            </a>
+          <h2 class="visually-hidden">Навигация: поиск и корзина</h2>
+          <div class="main-navigation__item main-navigation__item--search main-navigation__item--lens">
+            <div class="main-navigation__wrapper main-navigation__wrapper--search main-navigation__wrapper--lens">
+              <a class="main-navigation__link main-navigation__link--with-icon main-navigation__link--search" href="blank.html">
+                <span class="main-navigation__text">Поиск по сайту</span>
+              </a>
+            </div>
           </div>
-          <div class="main-navigation__wrapper main-navigation__wrapper--search main-navigation__wrapper--cart">
-            <a class="main-navigation__link main-navigation__link--with-icon main-navigation__link--cart" href="blank.html">Корзина: пока пуста</a>
+          <div class="main-navigation__item main-navigation__item--search main-navigation__item--cart">
+            <div class="main-navigation__wrapper main-navigation__wrapper--search main-navigation__wrapper--cart">
+              <a class="main-navigation__link main-navigation__link--with-icon main-navigation__link--cart" href="blank.html">Корзина: пока пуста</a>
+            </div>
           </div>
         </nav>
         <nav class="page-header__main-navigation page-header__main-navigation--hot main-navigation main-navigation--hot">
@@ -66,7 +70,7 @@
     <main class="page-main page-main--index">
       <h1 class="visually-hidden">«Мишка» - интернет-магазин игрушек ручной работы</h1>
       <div class="page-main__wrap">
-        <div class="page-main__holder">
+        <div class="page-main__holder page-main__holder--index">
           <picture class="page-main__box">
             <source media="(min-width: 768px)" srcset="img/page-main__background_big.jpg">
             <img class="page-main__background" src="img/page-main__background.jpg" width="575" height="355" alt="Игрушки ручной работы">
@@ -99,7 +103,7 @@
             </ul>
           </nav>
         </div>
-        <div class="page-main__waves"></div>
+        <div class="page-main__waves page-main__waves--index"></div>
       </div>
 
       <section class="page-main__featured featured">

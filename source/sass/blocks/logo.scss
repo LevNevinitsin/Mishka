@@ -1,3 +1,11 @@
+.logo {
+  display: block;
+
+  &:focus {
+    @include focus;
+  }
+}
+
 .logo__image {
   display: block;
 }

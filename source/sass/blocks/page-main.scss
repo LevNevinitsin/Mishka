@@ -1,4 +1,6 @@
 .page-main {
+  overflow-wrap: break-word;
+
   &--catalog {
     padding-bottom: 59px;
   }
@@ -14,26 +16,31 @@
 }
 
 .page-main__holder {
-  grid-row: 1 / 3;
-  grid-column: 1 / 2;
-  align-self: start;
-  display: grid;
-  grid-template: auto 120px 206px auto / 1fr 260px 1fr;
-  background-color: $holder-background-index;
-  overflow-x: hidden;
+  &--index {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    align-self: start;
+    display: grid;
+    grid-template: auto 120px 206px auto / 1fr 260px 1fr;
+    background-color: $holder-background-index;
+    overflow-x: hidden;
+
+    @media (min-width: $tablet-width) {
+      grid-template: auto 373px 118px auto / 1fr 668px 1fr;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template: auto 355px 136px auto / 1fr 1050px 1fr;
+    }
+  }
 
   &--form {
-    margin-bottom: 17px;
     padding: 73px 0 74px;
     background-color: $holder-background-inner;
-  }
 
-  @media (min-width: $tablet-width) {
-    grid-template: auto 373px 118px auto / 1fr 668px 1fr;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-template: auto 355px 136px auto / 1fr 1050px 1fr;
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 16px;
+    }
   }
 }
 
@@ -78,7 +85,18 @@
   line-height: 30px;
   font-weight: bold;
   text-align: center;
-  overflow-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    width: 668px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 
   &--index {
     padding-top: 72px;
@@ -87,10 +105,7 @@
     z-index: 1;
 
     @media (min-width: $tablet-width) {
-      width: 668px;
       padding-top: 88px;
-      font-size: 43px;
-      line-height: 50px;
     }
   }
 }
@@ -110,23 +125,38 @@
 }
 
 .page-main__waves {
-  height: 34px;
-  grid-row: 2 / 4;
-  grid-column: 1 / 2;
-  align-self: end;
+  height: 24px;
   background: url("../img/wave_big.svg");
   background-position: 50%;
   background-repeat: repeat-x;
-  z-index: 3;
+
+  &--index {
+    grid-row: 2 / 4;
+    grid-column: 1 / 2;
+    align-self: end;
+    z-index: 3;
+  }
+
+  &--inner {
+    width: 100%;
+    margin-bottom: 54px;
+    background-color: $waves-background-inner;
+  }
 
   @media (max-width: $mobile-width-only) {
     display: none;
   }
 
   @media (min-width: $desktop-width) {
+    height: 34px;
     background: url("../img/wave_big_desktop.svg");
     background-position: 50%;
     background-repeat: repeat-x;
+
+    &--inner {
+      margin-bottom: 98px;
+      background-color: $waves-background-inner;
+    }
   }
 }
 
@@ -159,7 +189,18 @@
   font-size: 13px;
   line-height: 24px;
   color: $lead;
-  overflow-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    width: 668px;
+    margin: 0 auto 13px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 702px;
+    margin: 0 auto 13px;
+  }
 }
 
 .page-main__goods {

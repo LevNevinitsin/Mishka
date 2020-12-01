@@ -37,6 +37,7 @@ $navigation-item-border: $gray-lighter;
 $navigation-item-border-nomobile: rgba($black, 0.1);
 $example: $gray-lighter;
 $header-background: $gray-white;
+$header-background-inner: $gray-lightest;
 
 // Shipping text
 
@@ -45,12 +46,14 @@ $shipping: $gray;
 // Sub-navigation
 
 $holder-background-index: $gray-white;
+$holder-background-inner: $gray-lightest;
 $decor-background: $main-color;
 $decor-background-hover: $main-color-few-darker;
 $toys-background: $main-color-darker;
 $toys-background-hover: $main-color-darkest;
 $subnavigation-link: $white;
 $subnavigation-link-focus: $black;
+$waves-background-inner: $gray-lightest;
 
 // Featured
 
@@ -108,6 +111,7 @@ $lead: $gray;
 
 // Form
 
+$form-section-background: $gray-lightest;
 $holder-background-inner: $gray-lightest;
 $order-legend: $main-color;
 $separator-line: $transparent;
@@ -121,6 +125,7 @@ $radio-border-active: rgba($black, 0.3);
 $checkbox-border-active: rgba($gray, 0.3);
 $text-input: $gray;
 $text-input-additional: $black;
+$text-input-background-nomobile: $transparent;
 $placeholder: rgba($black, 0.3);
 $text-input-border: $black;
 $text-input-border-interact: $main-color-tweaked;
