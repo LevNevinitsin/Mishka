@@ -91,6 +91,7 @@ $email-border-active: rgba($main-color-darkest, 0.1);
 // Footer
 
 $footer-background: $gray-lightest;
+$logo-footer-hover: $main-color-darkest;
 $social-fill-hover: $main-color-darkest;
 $social-border: $gray-light;
 $copyright-hover: $main-color-darkest;
@@ -133,6 +134,7 @@ $text-input-background-nomobile: $transparent;
 $placeholder: rgba($black, 0.3);
 $text-input-border: $black;
 $text-input-border-interact: $main-color-tweaked;
+$form-icon-interact: $main-color-tweaked;
 $star-legend: $gray;
 
 // Catalogue

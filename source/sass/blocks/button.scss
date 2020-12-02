@@ -1,6 +1,6 @@
 .button {
-  padding: 14px;
   width: 260px;
+  padding: 14px;
   font-family: inherit;
   font-size: 18px;
   line-height: 20px;
@@ -26,12 +26,16 @@
     padding: 16px;
     font-size: 17px;
     line-height: 16px;
+
+    &:focus {
+      @include focus;
+    }
   }
 
   &--process {
     width: 192px;
-    line-height: 16px;
     padding: 16px 19px 16px 20px;
+    line-height: 16px;
   }
 
   @media (min-width: $tablet-width) {
