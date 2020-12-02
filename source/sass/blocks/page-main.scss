@@ -57,19 +57,17 @@
 }
 
 .page-main__box {
-  height: 326px;
   grid-row: 2 / 4;
   grid-column: 1 / 4;
   justify-self: center;
   align-self: end;
   display: flex;
   align-items: flex-end;
+  height: 326px;
   padding-bottom: 133px;
   z-index: 0;
 
   @media (min-width: $tablet-width) {
-    grid-row: 2 / 4;
-    grid-column: 1 / 4;
     display: block;
     height: auto;
     padding: 0;
@@ -218,9 +216,8 @@
     line-height: 30px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     width: 702px;
-    margin: 0 auto 13px;
   }
 }
 
