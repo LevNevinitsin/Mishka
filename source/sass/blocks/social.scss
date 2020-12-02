@@ -1,5 +1,5 @@
 .social {
-  padding: 25px 0 24px;
+  padding: 21px 0 24px;
   text-align: center;
   border-bottom: 1px solid $social-border;
 
@@ -12,10 +12,14 @@
 .social__list {
   display: flex;
   flex-wrap: wrap;
-  width: 153px;
+  width: 155px;
   margin: 0 auto;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 4px;
+  }
 }
 
 .social__item {
@@ -26,46 +30,43 @@
   height: 35px;
 
   &:not(:last-child):not(:nth-child(3n)) {
-    margin-right: 24px;
+    margin-right: 25px;
   }
 
   &:not(:nth-last-child(-n+3)) {
     margin-bottom: 20px;
   }
+
+  @media (min-width: $tablet-width) {
+    &:not(:last-child):not(:nth-child(3n)) {
+      margin-right: 24px;
+    }
+  }
 }
 
 .social__link {
   display: flex;
+  padding: 4px;
+
+  &:hover {
+    .social__path {
+      fill: $social-fill-hover;
+    }
+  }
+
+  &:active {
+    .social__path {
+      opacity: 0.3;
+    }
+  }
 
   &:focus {
     @include focus;
   }
+}
 
-  &::before {
-    content: "";
-  }
-
-  &--instagram {
-    &::before {
-      width: 22px;
-      height: 21px;
-      background-image: url("https://via.placeholder.com/22x21");
-    }
-  }
-
-  &--facebook {
-    &::before {
-      width: 15px;
-      height: 28px;
-      background-image: url("https://via.placeholder.com/15x28");
-    }
-  }
-
-  &--twitter {
-    &::before {
-      width: 23px;
-      height: 20px;
-      background-image: url("https://via.placeholder.com/23x20");
-    }
+.social__icon {
+  @media (min-width: $tablet-width) {
+    height: 29px;
   }
 }

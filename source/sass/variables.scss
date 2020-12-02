@@ -33,6 +33,7 @@ $body-border: $gray-lighter;
 $navigation-link: $black;
 $navigation-link-hover: rgba($black, 0.6);
 $navigation-link-active: rgba($black, 0.3);
+$navigation-icon-hover: $main-color;
 $navigation-item-border: $gray-lighter;
 $navigation-item-border-nomobile: rgba($black, 0.1);
 $example: $gray-lighter;
@@ -89,7 +90,9 @@ $email-border-active: rgba($main-color-darkest, 0.1);
 // Footer
 
 $footer-background: $gray-lightest;
+$social-fill-hover: $main-color-darkest;
 $social-border: $gray-light;
+$copyright-hover: $main-color-darkest;
 
 // Modal
 

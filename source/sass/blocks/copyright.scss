@@ -2,18 +2,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 22px 0 23px;
+  padding: 18px 0 18px 4px;
   text-align: center;
   overflow-wrap: break-word;
 
   @media (min-width: $tablet-width) {
     padding: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 1px;
+  }
 }
 
 .copyright__text {
   width: 128px;
-  margin-right: 27px;
+  margin-right: 23px;
   font-size: 19px;
   line-height: 18px;
   vertical-align: middle;
@@ -25,6 +29,20 @@
 }
 
 .copyright__link {
+  padding: 4px;
+
+  &:hover {
+    .copyright__path {
+      fill: $copyright-hover;
+    }
+  }
+
+  &:active {
+    .copyright__path {
+      opacity: 0.3;
+    }
+  }
+
   &:focus {
     @include focus;
   }

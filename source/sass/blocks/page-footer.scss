@@ -3,7 +3,7 @@
   background: $footer-background;
 
   @media (min-width: $tablet-width) {
-    padding: 51px 0 58px;
+    padding: 46px 0 53px;
   }
 }
 
@@ -27,5 +27,18 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    margin-left: -5px;
+  }
+}
+
+.page-footer__social {
+  @media (min-width: $tablet-width) {
+    margin-left: -2px;
+  }
+}
+
+.page-footer__copyright {
+  @media (min-width: $tablet-width) {
+    margin-right: -4px;
   }
 }
