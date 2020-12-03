@@ -149,10 +149,6 @@
     color: $goods-heading-active;
   }
 
-  &:focus {
-    @include focus;
-  }
-
   @media (min-width: $tablet-width) {
     display: block;
     width: max-content;
@@ -164,8 +160,6 @@
   order: -1;
 
   &:focus {
-    @include focus(3px);
-
     z-index: 2;
   }
 
@@ -279,8 +273,4 @@
   width: 20px;
   height: 19px;
   background-color: $add-example; // пока просто для видимости
-
-  &:focus {
-    @include focus;
-  }
 }

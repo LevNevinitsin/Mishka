@@ -98,10 +98,6 @@
     padding: 19px 0 36px;
   }
 
-  &:focus {
-    @include focus(5px);
-  }
-
   @media (min-width: $tablet-width) {
     padding: 26px 115px 35px 36px;
 

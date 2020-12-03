@@ -1,4 +1,4 @@
 @mixin focus($size: 2px, $direction: null) {
   outline: none;
-  box-shadow: $direction 0 0 $size $size $main-color-darkest;
+  box-shadow: $direction 0 0 0 $size $focus-color;
 }

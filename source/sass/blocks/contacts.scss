@@ -168,10 +168,6 @@
     border-color: $email-border-active;
   }
 
-  &:focus {
-    @include focus;
-  }
-
   @media (min-width: $tablet-width) {
     width: 206px;
     padding-top: 3px;

@@ -226,10 +226,6 @@
     }
   }
 
-  &:focus {
-    @include focus(3px);
-  }
-
   &::before {
     content: "";
     position: absolute;
