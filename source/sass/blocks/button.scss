@@ -22,10 +22,6 @@
     color: $button-text-active;
   }
 
-  &:focus {
-    @include focus;
-  }
-
   &--form {
     padding: 16px;
     font-size: 17px;
@@ -41,18 +37,21 @@
   @media (min-width: $tablet-width) {
     &--featured {
       width: 292px;
+      font-size: 17px;
     }
 
     &--reviews {
       width: auto;
       min-width: 175px;
-      max-width: 330px;
+      max-width: 230px;
+      font-size: 17px;
     }
 
     &--contacts {
-      width: auto;
+      width: max-content;
       min-width: 230px;
       max-width: 600px;
+      font-size: 17px;
     }
 
     &--form {
@@ -66,7 +65,12 @@
   }
 
   @media (min-width: $desktop-width) {
+    &--reviews {
+      max-width: 330px;
+    }
+
     &--contacts {
+      width: max-content;
       max-width: 290px;
     }
 

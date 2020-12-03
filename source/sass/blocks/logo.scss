@@ -1,11 +1,44 @@
 .logo {
   display: block;
+  padding: 4px;
 
-  &:focus {
-    @include focus;
+  &--inner {
+    &:hover {
+      .logo__image {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      .logo__image {
+        opacity: 0.3;
+      }
+    }
   }
 }
 
 .logo__image {
   display: block;
+  width: 86px;
+  height: 35px;
+  object-fit: contain;
+
+  @media (min-width: $tablet-width) {
+    &--header {
+      width: 115px;
+      height: 48px;
+    }
+
+    &--footer {
+      width: 103px;
+      height: 36px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--header {
+      width: 149px;
+      height: 72px;
+    }
+  }
 }

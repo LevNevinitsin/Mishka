@@ -15,7 +15,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 0 0 85px;
+    padding: 41px 0 85px;
 
     &::after {
       height: 17px;
@@ -25,11 +25,14 @@
 
   @media (min-width: $desktop-width) {
     width: 1050px;
-    padding: 0 0 90px;
+    padding: 44px 0 90px;
 
     &::after {
+      left: -1px;
+      // bottom: 0;
+      width: calc(100% + 2px);
       height: 23px;
-      background-image: url("../img/section_border_desktop.svg");
+      background-image: url("../img/section_border_desktop_reviews.svg");
     }
   }
 }
@@ -46,9 +49,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template: 79px auto auto auto auto / 176px 1fr 1fr;
+    grid-template: 79px auto auto auto auto / 175px 1fr 1fr;
     width: auto;
+    padding: 0;
   }
 }
 
@@ -59,13 +62,21 @@
   font-weight: bold;
 
   @media (min-width: $tablet-width) {
-    width: 330px;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+    width: 330px;
+    margin: 0 0 15px;
     padding-top: 4px;
     font-size: 43px;
     line-height: 50px;
     z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: -1px 0 36px -1px;
+    padding: 0;
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -83,7 +94,7 @@
 }
 
 .reviews__list {
-  margin: 0 0 30px;
+  margin: 0 0 29px;
   padding: 0;
   list-style: none;
 
@@ -92,6 +103,10 @@
     grid-column: 2 / 4;
     margin: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    min-height: 286px;
+  }
 }
 
 .reviews__blockquote {
@@ -99,7 +114,7 @@
 }
 
 .reviews__text {
-  margin: 0 0 33px;
+  margin: 0 0 34px;
   font-size: 15px;
   line-height: 30px;
   color: $reviews-text;
@@ -108,10 +123,6 @@
     margin: 0 0 61px;
     font-size: 17px;
 
-    // Оказалось, что такую же обводку текста, как в Фигме, просто так не сделать.
-    // -webkit-text-stroke работает неудовлетворительно (по крайней мере на таком размере шрифта),
-    // простая одиночная тень не дает нужного эффекта. Решение нашел в статье в интернете.
-    // Можно еще через svg сделать.
     text-shadow:
       calc(1px * 1) calc(1px * 0) 0 $review-text-border,
       calc(1px * 0.9239) calc(1px * 0.3827) 0 $review-text-border,
@@ -130,11 +141,13 @@
       calc(1px * 0.7071) calc(1px * -0.7071) 0 $review-text-border,
       calc(1px * 0.9239) calc(1px * -0.3827) 0 $review-text-border;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 44px;
+  }
 }
 
 .reviews__cite {
-  line-height: 30px;
-
   @media (min-width: $tablet-width) {
     width: 330px;
   }
@@ -142,7 +155,9 @@
 
 .reviews__author {
   display: block;
+  margin-bottom: 3px;
   font-size: 17px;
+  line-height: 24px;
   font-weight: bold;
   font-style: normal;
 
@@ -150,11 +165,16 @@
     font-size: 18px;
     width: 330px;
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 17px;
+  }
 }
 
 .reviews__social {
   display: block;
   font-size: 17px;
+  line-height: 30px;
   font-style: normal;
   color: $review-social;
 
@@ -171,11 +191,11 @@
     grid-row: 5 / 6;
     grid-column: 3 / 4;
     justify-self: end;
-    margin: -103px 0 0;
+    margin: -100px 0 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin: -130px 0 0;
+    margin: -150px 0 0;
   }
 }
 
@@ -206,20 +226,16 @@
     }
   }
 
-  &:focus {
-    @include focus(3px);
-  }
-
   &::before {
     content: "";
     position: absolute;
-    top: 48%;
-    left: 26%;
+    top: 41%;
+    left: 28%;
     width: 18px;
     height: 18px;
     border-left: 4px solid $review-toggle-arrow;
     border-bottom: 4px solid $review-toggle-arrow;
-    transform: rotate(45deg) translateY(-48%);
+    transform: rotate(45deg) translateY(-41%);
   }
 
   @media (min-width: $tablet-width) {
@@ -231,12 +247,12 @@
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 45%;
+    left: 49%;
     width: 47px;
     height: 4px;
     background-color: $review-toggle-arrow;
-    transform: translateX(-50%);
+    transform: translateX(-49%);
   }
 
   &--prev {
@@ -249,8 +265,14 @@
 
   &--next {
     &::before {
-      left: 51%;
-      transform: rotate(225deg) translateY(50%);
+      top: 41%;
+      left: 47%;
+      transform: rotate(225deg) translateY(41%);
+    }
+
+    &::after {
+      left: 46.5%;
+      transform: translateX(-46.5%);
     }
   }
 }

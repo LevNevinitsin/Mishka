@@ -151,15 +151,4 @@
     margin: 0 auto;
     padding: 21px 20px 15px;
   }
-
-  &:focus {
-    padding: 17px;
-    border: 1px solid $modal-button-focus-border;
-
-    @include focus(3px);
-
-    @media (min-width: $tablet-width) {
-      padding: 20px 19px 14px;
-    }
-  }
 }

@@ -1,7 +1,12 @@
 .sub-navigation {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 19px;
+  line-height: 24px;
   font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .sub-navigation__list {
@@ -17,12 +22,8 @@
 }
 
 .sub-navigation__item {
-  @media (min-width: $tablet-width) {
-    width: 50%;
-  }
-
-  &:hover > {
-    .sub-navigation__link {
+  &:hover {
+    > .sub-navigation__link {
       &::before {
         content: "";
         position: absolute;
@@ -30,6 +31,20 @@
         bottom: 100%;
         left: 0;
         right: 0;
+      }
+    }
+
+    .sub-navigation__wrapper {
+      &::after {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &:active {
+    .sub-navigation__wrapper {
+      &::after {
+        opacity: 0.3;
       }
     }
   }
@@ -65,6 +80,10 @@
       }
     }
   }
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
 }
 
 .sub-navigation__link {
@@ -79,24 +98,77 @@
     padding: 19px 0 36px;
   }
 
-  &:focus {
-    @include focus(5px);
-  }
-
   @media (min-width: $tablet-width) {
-    padding: 24px 115px 35px 36px;
+    padding: 26px 115px 35px 36px;
 
     &:hover {
-      padding: 19px 115px 40px 36px;
+      padding: 21px 115px 40px 36px;
     }
   }
 }
 
 .sub-navigation__wrapper {
+  position: relative;
   margin: 0 auto;
   width: 260px;
 
+  &::after {
+    content: "";
+    position: absolute;
+    background-size: cover;
+    opacity: 0.5;
+  }
+
+  &--decor {
+    &::after {
+      top: -1px;
+      right: 6px;
+      width: 40px;
+      height: 62px;
+      background-image: url("../img/icon_table_lamp.svg");
+    }
+  }
+
+  &--toys {
+    &::after {
+      top: -3px;
+      right: -3px;
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/icon_constructor_block.svg");
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: auto;
+
+    &--decor {
+      &::after {
+        top: 3px;
+        right: -80px;
+        width: 43px;
+        height: 64px;
+        background-image: url("../img/icon_table_lamp_tablet_integer.svg");
+      }
+    }
+
+    &--toys {
+      &::after {
+        top: 5px;
+        right: -82px;
+        width: 61px;
+        height: 61px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--toys {
+      &::after {
+        top: 5px;
+        right: -80px;
+        width: 60px;
+      }
+    }
   }
 }

@@ -3,12 +3,12 @@
   overflow-wrap: break-word;
 
   @media (min-width: $tablet-width) {
-    padding: 55px 0 0;
+    padding: 55px 0 41px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1050px;
-    padding: 68px 175px 0;
+    padding: 68px 175px 45px;
   }
 }
 
@@ -32,11 +32,13 @@
   font-weight: bold;
 
   @media (min-width: $tablet-width) {
+    margin: 0 0 42px;
     font-size: 43px;
     line-height: 50px;
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0 0 39px;
     font-size: 53px;
     line-height: 57px;
   }
@@ -54,13 +56,91 @@
 }
 
 .advantages__item {
-  margin-bottom: 20px;
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+  }
+
+  &--ecologic {
+    margin-bottom: 30px;
+
+    &::before {
+      width: 33px;
+      height: 38px;
+      margin-bottom: 16px;
+      margin-left: 8px;
+      background-image: url("../img/icon_flower.svg");
+    }
+  }
+
+  &--scandinavian {
+    margin-bottom: 35px;
+
+    &::before {
+      width: 47px;
+      height: 27px;
+      margin-bottom: 26px;
+      background-image: url("../img/icon_money.svg");
+    }
+  }
+
+  &--more-likes {
+    margin-bottom: 32px;
+
+    &::before {
+      width: 34px;
+      height: 27px;
+      margin-bottom: 21px;
+      margin-left: 7px;
+      background-image: url("../img/icon_heart.svg");
+    }
+  }
+
+  &--hand-made {
+    margin-bottom: 33px;
+
+    &::before {
+      width: 35px;
+      height: 34px;
+      margin-bottom: 17px;
+      margin-left: 3px;
+      background-image: url("../img/icon_ball.svg");
+    }
+  }
+
+  &--native-support {
+    margin-bottom: 32px;
+
+    &::before {
+      width: 55px;
+      height: 23px;
+      margin-bottom: 26px;
+      margin-left: -6px;
+      background-image: url("../img/icon_rocket.svg");
+    }
+  }
+
+  &--gift-pack {
+    &::before {
+      width: 33px;
+      height: 32px;
+      margin-bottom: 20px;
+      margin-left: 3px;
+      background-image: url("../img/icon_gift.svg");
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: calc(50% - 20px);
+    margin-bottom: 56px;
     font-size: 20px;
     line-height: 22px;
 
@@ -86,37 +166,86 @@
       margin-bottom: 0;
     }
 
+    &--ecologic {
+      padding: 0 0 1px;
+
+      &::before {
+        margin-bottom: 18px;
+        margin-left: 8px;
+      }
+    }
+
     &--scandinavian {
+      padding: 0 0 1px;
       order: 3;
+
+      &::before {
+        margin-left: 1px;
+      }
     }
 
     &--more-likes {
+      padding: 6px 0 1px;
       order: 5;
+
+      &::before {
+        margin-left: 8px;
+      }
     }
 
     &--hand-made {
+      padding: 4px 0 0;
       order: 2;
+
+      &::before {
+        margin-bottom: 19px;
+      }
     }
 
     &--native-support {
+      padding: 3px 0 0;
       order: 4;
+
+      &::before {
+        margin-bottom: 28px;
+      }
     }
 
     &--gift-pack {
+      padding: 2px 0 0;
       order: 6;
+
+      &::before {
+        margin-bottom: 21px;
+      }
     }
   }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
 
-  &::before {
-    content: "";
-    display: block;
-    width: 33px;
-    height: 33px;
-    margin-bottom: 20px;
-    background-image: url("https://via.placeholder.com/33x33");
+    &--ecologic {
+      padding: 0;
+    }
+
+    &--scandinavian {
+      &::before {
+        margin-left: 1px;
+      }
+    }
+
+    &--more-likes {
+      padding: 5px 0 1px;
+    }
+
+    &--hand-made {
+      &::before {
+        margin-bottom: 18px;
+      }
+    }
+
+    &--gift-pack {
+      padding: 1px 0 0;
+    }
   }
 }
