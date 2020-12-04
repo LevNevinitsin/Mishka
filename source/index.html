@@ -19,10 +19,12 @@
             </picture>
           </a>
         </div>
-        <button class="main-navigation__toggle main-navigation__toggle--nojs" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <nav class="page-header__main-navigation page-header__main-navigation--basic main-navigation main-navigation--basic">
+        <div class="page-header__holder">
+          <button class="page-header__toggle page-header__toggle--nojs" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <nav class="page-header__main-navigation page-header__main-navigation--basic main-navigation main-navigation--basic main-navigation--nojs">
           <h2 class="visually-hidden">Навигация по основным разделам сайта</h2>
           <ul class="main-navigation__list main-navigation__list--basic">
             <li class="main-navigation__item main-navigation__item--basic">
@@ -37,7 +39,7 @@
             </li>
           </ul>
         </nav>
-        <nav class="page-header__main-navigation page-header__main-navigation--search main-navigation main-navigation--search">
+        <nav class="page-header__main-navigation page-header__main-navigation--search main-navigation main-navigation--search main-navigation--nojs">
           <h2 class="visually-hidden">Навигация: поиск и корзина</h2>
           <div class="main-navigation__item main-navigation__item--search main-navigation__item--lens">
             <div class="main-navigation__wrapper main-navigation__wrapper--search main-navigation__wrapper--lens">
@@ -80,10 +82,10 @@
       <h1 class="visually-hidden">«Мишка» - интернет-магазин игрушек ручной работы</h1>
       <div class="page-main__wrap">
         <div class="page-main__holder page-main__holder--index">
-          <div class="page-main__box"> <!-- На лайве порекомендовали не вешать классы на <picture> -->
+          <div class="page-main__box">
             <picture>
-              <source media="(min-width: 768px)" srcset="img/page-main__background_big.jpg">
-              <img class="page-main__background" src="img/page-main__background.jpg" width="575" height="355" alt="Игрушки ручной работы">
+              <source media="(min-width: 768px)" srcset="img/page-main__background_big.jpg 1x, img/page-main__background_big@2x.jpg 2x">
+              <img class="page-main__background" src="img/page-main__background.jpg" srcset="img/page-main__background@2x.jpg 2x" width="575" height="355" alt="Игрушки ручной работы">
             </picture>
           </div>
           <p class="page-main__title page-main__title--index">
@@ -140,9 +142,9 @@
           </dl>
           <div class="featured__image">
             <picture>
-              <source media="(min-width: 1150px)" srcset="https://via.placeholder.com/525x636">
-              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/334x404">
-              <img class="featured__picture" src="https://via.placeholder.com/260x315" width="260" height="315" alt="Три вязаные корзинки трех разных размеров в двух расцветках">
+              <source media="(min-width: 1150px)" srcset="img/featured_desktop.jpg 1x, img/featured_desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/featured_tablet.jpg 1x, img/featured_tablet@2x.jpg 2x">
+              <img class="featured__picture" src="img/featured_mobile.jpg" srcset="img/featured_mobile@2x.jpg 2x" width="260" height="315" alt="Три вязаные корзинки трех разных размеров в двух расцветках">
             </picture>
           </div>
           <p class="featured__price">Цена: 990 руб.</p>
@@ -186,7 +188,7 @@
       <section class="page-main__reviews reviews">
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title">Отзывы</h2>
-          <img class="reviews__image" src="img/review_bg.jpg" width="350" height="457" alt="Правая часть вязаной подложки круглой формы белого цвета">
+          <img class="reviews__image" src="img/review_bg.jpg" srcset="img/review_bg@2x.jpg 2x" width="350" height="457" alt="Правая часть вязаной подложки круглой формы белого цвета">
           <ul class="reviews__list slider__list">
             <li class="reviews__item slider__item slider__item--active">
               <blockquote class="reviews__blockquote">
@@ -256,9 +258,9 @@
           </dl>
           <div class="contacts__map">
             <picture>
-              <source media="(min-width: 1150px)" srcset="https://via.placeholder.com/527x457">
-              <source media="(min-width: 768px)" srcset="https://via.placeholder.com/1149x457">
-              <img class="contacts__picture" src="https://via.placeholder.com/767x454" width="767" height="454" alt="Местоположение магазина на карте">
+              <source media="(min-width: 1150px)" srcset="img/map_desktop.jpg 1x, img/map_desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map_tablet.jpg 1x, img/map_tablet@2x.jpg 2x">
+              <img class="contacts__picture" src="img/map_mobile.jpg" srcset="img/map_mobile.jpg 2x" width="767" height="454" alt="Местоположение магазина на карте">
             </picture>
           </div>
           <a class="contacts__write button button--contacts" href="blank.html">Напишите нам</a>
@@ -351,6 +353,7 @@
       </div>
     </section>
 
-
+    <script src="js/contacts.js"></script>
+    <script src="js/main-navigation.js"></script> <!-- пока что так подключил, дальше нам вероятно про сборщик расскажут -->
   </body>
 </html>

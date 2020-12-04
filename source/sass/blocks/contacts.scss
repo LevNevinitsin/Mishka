@@ -187,13 +187,28 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 5;
+    height: 457px;
     margin: 0 0 55px;
   }
 
   @media (min-width: $desktop-width) {
     grid-row: 1 / 5;
     grid-column: 3 / 4;
+    width: 527px;
     margin: 0;
+  }
+
+  &--api {
+    width: 100%;
+    height: 454px;
+
+    @media (min-width: $tablet-width) {
+      height: 457px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 527px;
+    }
   }
 }
 
