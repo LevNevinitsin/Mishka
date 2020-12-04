@@ -2,11 +2,16 @@
 
 .goods__holder {
   margin-bottom: 30px;
-  padding: 73px 0 74px;
+  padding: 73px 0;
   background-color: $holder-background-inner;
 
   @media (min-width: $tablet-width) {
+    padding: 36px 0 62px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 58px 0 79px;
   }
 }
 
@@ -26,6 +31,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 700px;
+    padding-left: 3px;
     font-size: 53px;
     line-height: 57px;
   }
@@ -126,6 +132,10 @@
     padding: 26px 32px 3px 33px;
     font-size: 20px;
     border-left: none;
+
+    &--basket {
+      padding: 26px 32px 6px 33px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -215,7 +225,7 @@
     grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
-    padding: 4px 33px 0 33px;
+    padding: 4px 32px 0 33px;
     border-left: none;
   }
 
@@ -238,7 +248,7 @@
 
   @media (min-width: $tablet-width) {
     flex-grow: 1;
-    max-width: 262px;
+    max-width: 268px;
     font-size: 15px;
   }
 
@@ -260,7 +270,11 @@
 
   @media (min-width: $tablet-width) {
     font-size: 17px;
-    padding: 23px 0 25px;
+    padding: 23px 0 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 22px 0 24px;
   }
 }
 
@@ -272,5 +286,37 @@
 .goods__add {
   width: 20px;
   height: 19px;
-  background-color: $add-example; // пока просто для видимости
+  margin-right: -1px;
+
+  @media (min-width: $tablet-width) {
+    width: 21px;
+    height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 1px;
+  }
+}
+
+.goods__icon {
+  width: 20px;
+  height: 19px;
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+
+    .goods__path {
+      fill: $goods-icon-hover;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 21px;
+    height: 18px;
+  }
 }
