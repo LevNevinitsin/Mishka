@@ -586,6 +586,7 @@
   &--tel,
   &--email {
     position: relative;
+    padding-right: 40px;
     z-index: 1;
 
     &:hover,
@@ -615,16 +616,26 @@
     width: auto;
     font-size: 19px;
 
-    &--name,
-    &--surname,
-    &--middle-name,
     &--tel,
     &--email {
+      padding: 16px 70px 18px 18px;
+    }
+
+    &--name,
+    &--surname,
+    &--middle-name {
       padding: 16px 18px 18px;
     }
 
     &--middle-name {
       height: 52px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--tel,
+    &--email {
+      padding: 16px 45px 18px 18px;
     }
   }
 }
