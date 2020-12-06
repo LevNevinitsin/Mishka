@@ -53,11 +53,19 @@
     &--index {
       grid-template: auto 371px 119px auto / 1fr 668px 1fr;
     }
+
+    &--form {
+      padding: 35px 0 63px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     &--index {
       grid-template: auto 355px 119px auto / 1fr 1050px 1fr;
+    }
+
+    &--form {
+      padding: 58px 0 79px;
     }
   }
 }
@@ -124,7 +132,11 @@
     line-height: 57px;
 
     &--index {
-      padding-top: 115px;
+      padding-top: 114px;
+    }
+
+    &--form {
+      padding-left: 3px;
     }
   }
 }
@@ -181,14 +193,15 @@
 
   @media (min-width: $desktop-width) {
     height: 34px;
-    background-image: url("../img/wave_big_desktop.svg");
 
     &--index {
       margin-left: 1px;
+      background-image: url("../img/wave_big_desktop.svg");
     }
 
     &--form {
-      margin-bottom: 98px;
+      margin-bottom: 99px;
+      background-image: url("../img/wave_big_desktop_inner.svg");
     }
 
     &--catalogue {
@@ -226,7 +239,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 702px;
+    width: 700px;
   }
 }
 
