@@ -199,9 +199,13 @@
       background-image: url("../img/wave_big_desktop.svg");
     }
 
+    &--form,
+    &--catalogue {
+      background-image: url("../img/wave_big_desktop_inner.svg");
+    }
+
     &--form {
       margin-bottom: 99px;
-      background-image: url("../img/wave_big_desktop_inner.svg");
     }
 
     &--catalogue {

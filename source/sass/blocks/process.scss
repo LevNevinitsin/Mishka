@@ -45,11 +45,11 @@
   &::before {
     content: "";
     position: absolute;
-    top: 35px;
-    left: 34px;
+    top: 34px;
+    left: 33px;
     width: 32px;
     height: 22px;
-    background-color: $add-example; // пока просто для отображения
+    background-image: url("../img/icon_video.svg");
   }
 
   // для тени
@@ -69,8 +69,8 @@
     background-color: $process-background;
 
     &::before {
-      top: 39px;
-      left: 40px;
+      top: 38px;
+      left: 41px;
     }
   }
 
@@ -81,7 +81,7 @@
     border-left: none;
 
     &::before {
-      top: 47px;
+      top: 46px;
       left: 79px;
     }
   }
@@ -131,6 +131,9 @@
   left: 50%;
   width: 101px;
   height: 77px;
+  background-color: $transparent;
+  background-image: url("../img/icon_button_play.svg");
+  border: none;
   transform: translate(-50%, -50%);
   transform-origin: center;
 
@@ -162,7 +165,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 12px 41px 45px;
+    padding: 12px 41px 45px 41px;
     background-color: $process-background;
   }
 
@@ -170,12 +173,13 @@
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     padding: 14px 35px 59px 80px;
+    border-left: none;
   }
 }
 
 .process__text {
   position: relative;
-  margin: 0 0 41px;
+  margin: 0 0 41px 0;
   font-size: 13px;
   line-height: 24px;
   color: $process-text;
@@ -183,10 +187,11 @@
   @media (min-width: $tablet-width) {
     font-size: 15px;
     line-height: 30px;
+    margin: 0 0 40px -2px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 52px;
+    margin: 0 0 51px -1px;
   }
 }
 
