@@ -1,5 +1,12 @@
+.page {
+  height: 100%;
+}
+
 .page__body {
   min-width: 320px;
+  min-height: 100%;
+  display: grid;
+  grid-template: min-content 1fr min-content / auto;
   margin: 0;
   font-family: "Open Sans", "Arial", sans-serif;
 }

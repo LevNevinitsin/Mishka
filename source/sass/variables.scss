@@ -29,8 +29,10 @@ $transparent: transparent;
 $body-border: $gray-lighter;
 $focus-color: $black;
 
-// Main navigation links
+// Main navigation
 
+$navigation-toggle-color: $black;
+$navigation-toggle-background: $transparent;
 $navigation-link: $black;
 $navigation-link-hover: rgba($black, 0.6);
 $navigation-link-active: rgba($black, 0.3);
@@ -40,6 +42,7 @@ $navigation-item-border-nomobile: rgba($black, 0.1);
 $example: $gray-lighter;
 $header-background: $gray-white;
 $header-background-inner: $gray-lightest;
+$header-wrapper-border: $gray-lighter;
 
 // Shipping text
 
