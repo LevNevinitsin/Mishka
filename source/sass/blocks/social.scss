@@ -49,13 +49,13 @@
   padding: 4px;
 
   &:hover {
-    .social__path {
+    svg {
       fill: $social-fill-hover;
     }
   }
 
   &:active {
-    .social__path {
+    svg {
       opacity: 0.3;
     }
   }

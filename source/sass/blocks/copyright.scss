@@ -26,19 +26,20 @@
 .copyright__logo {
   display: block;
   vertical-align: middle;
+  fill: $copyright-logo;
 }
 
 .copyright__link {
   padding: 4px;
 
   &:hover {
-    .copyright__path {
-      fill: $copyright-hover;
+    .copyright__logo {
+      fill: $copyright-logo-hover;
     }
   }
 
   &:active {
-    .copyright__path {
+    .copyright__logo {
       opacity: 0.3;
     }
   }
