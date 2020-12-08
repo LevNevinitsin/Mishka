@@ -18,10 +18,12 @@
             </picture>
           </a>
         </div>
-        <button class="main-navigation__toggle main-navigation__toggle--nojs" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <nav class="page-header__main-navigation page-header__main-navigation--basic main-navigation main-navigation--basic">
+        <div class="page-header__holder">
+          <button class="page-header__toggle page-header__toggle--nojs" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <nav class="page-header__main-navigation page-header__main-navigation--basic main-navigation main-navigation--basic main-navigation--nojs">
           <h2 class="visually-hidden">Навигация по основным разделам сайта</h2>
           <ul class="main-navigation__list main-navigation__list--basic">
             <li class="main-navigation__item main-navigation__item--basic">
@@ -36,7 +38,7 @@
             </li>
           </ul>
         </nav>
-        <nav class="page-header__main-navigation page-header__main-navigation--search main-navigation main-navigation--search">
+        <nav class="page-header__main-navigation page-header__main-navigation--search main-navigation main-navigation--search main-navigation--nojs">
           <h2 class="visually-hidden">Навигация: поиск и корзина</h2>
           <div class="main-navigation__item main-navigation__item--search main-navigation__item--lens">
             <div class="main-navigation__wrapper main-navigation__wrapper--search main-navigation__wrapper--lens">
@@ -89,9 +91,9 @@
             </h3>
             <a class="goods__link-image" href="blank.html">
               <picture>
-                <source media="(min-width: 1150px)" srcset="https://via.placeholder.com/316x462">
-                <source media="(min-width: 768px)" srcset="https://via.placeholder.com/334x334">
-                <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Игрушка-заяц">
+                <source media="(min-width: 1150px)" srcset="img/product1_desktop.jpg 1x, img/product1_desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/product1_tablet.jpg 1x, img/product1_tablet@2x.jpg 2x">
+                <img class="goods__image" src="img/product1_mobile.jpg" srcset="img/product1_mobile@2x.jpg 2x" width="260" height="195" alt="Игрушка-заяц">
               </picture>
             </a>
             <div class="goods__box">
@@ -113,9 +115,9 @@
             </h3>
             <a class="goods__link-image" href="blank.html">
               <picture>
-                <source media="(min-width: 1150px)" srcset="https://via.placeholder.com/316x462">
-                <source media="(min-width: 768px)" srcset="https://via.placeholder.com/334x334">
-                <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Корзинка для белья с поверхностью из бело-оранжевой вязаной ткани с тремя текстильными предметами внутри">
+                <source media="(min-width: 1150px)" srcset="img/product2_desktop.jpg 1x, img/product2_desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/product2_tablet.jpg 1x, img/product2_tablet@2x.jpg 2x">
+                <img class="goods__image" src="img/product2_mobile.jpg" srcset="img/product2_mobile@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья с поверхностью из бело-оранжевой вязаной ткани с тремя текстильными предметами внутри">
               </picture>
             </a>
             <div class="goods__box">
@@ -140,9 +142,9 @@
             </h3>
             <a class="goods__link-image" href="blank.html">
               <picture>
-                <source media="(min-width: 1150px)" srcset="https://via.placeholder.com/316x462">
-                <source media="(min-width: 768px)" srcset="https://via.placeholder.com/334x334">
-                <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Корзинка для белья с поверхностью из бело-зеленой вязаной ткани с большим количеством игрушек внутри">
+                <source media="(min-width: 1150px)" srcset="img/product3_desktop.jpg 1x, img/product3_desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/product3_tablet.jpg 1x, img/product3_tablet@2x.jpg 2x">
+                <img class="goods__image" src="img/product3_mobile.jpg" srcset="img/product3_mobile@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья с поверхностью из бело-зеленой вязаной ткани с шестью игрушками внутри">
               </picture>
             </a>
             <div class="goods__box goods__box--big">
@@ -167,9 +169,9 @@
         </h2>
         <div class="process__holder">
           <picture>
-            <source media="(min-width: 1150px)" srcset="https://via.placeholder.com/683x455">
-            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/668x455">
-            <img class="process__image" src="https://via.placeholder.com/260x150" width="260" height="150" alt="Один из кадров процесса производства: серо-зеленая корзинка">
+            <source media="(min-width: 1150px)" srcset="img/process_desktop.jpg 1x, img/process_desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/process_tablet.jpg 1x, img/process_tablet@2x.jpg 2x">
+            <img class="process__image" src="img/process_mobile.jpg" srcset="img/process_mobile@2x.jpg 2x" width="260" height="150" alt="Один из кадров процесса производства: серо-зеленая корзинка">
           </picture>
           <button class="process__start" aria-label="Запустить видео"></button>
         </div>
