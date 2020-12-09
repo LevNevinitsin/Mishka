@@ -18,10 +18,12 @@
             </picture>
           </a>
         </div>
-        <button class="main-navigation__toggle main-navigation__toggle--nojs" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <nav class="page-header__main-navigation page-header__main-navigation--basic main-navigation main-navigation--basic">
+        <div class="page-header__holder">
+          <button class="page-header__toggle page-header__toggle--nojs" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <nav class="page-header__main-navigation page-header__main-navigation--basic main-navigation main-navigation--basic main-navigation--nojs">
           <h2 class="visually-hidden">Навигация по основным разделам сайта</h2>
           <ul class="main-navigation__list main-navigation__list--basic">
             <li class="main-navigation__item main-navigation__item--basic">
@@ -36,7 +38,7 @@
             </li>
           </ul>
         </nav>
-        <nav class="page-header__main-navigation page-header__main-navigation--search main-navigation main-navigation--search">
+        <nav class="page-header__main-navigation page-header__main-navigation--search main-navigation main-navigation--search main-navigation--nojs">
           <h2 class="visually-hidden">Навигация: поиск и корзина</h2>
           <div class="main-navigation__item main-navigation__item--search main-navigation__item--lens">
             <div class="main-navigation__wrapper main-navigation__wrapper--search main-navigation__wrapper--lens">
@@ -302,5 +304,6 @@
       </div>
     </footer>
 
+    <script src="js/main-navigation.js"></script>
   </body>
 </html>
