@@ -47,17 +47,14 @@
 .social__link {
   display: flex;
   padding: 4px;
+  color: $social-fill;
 
   &:hover {
-    svg {
-      fill: $social-fill-hover;
-    }
+    color: $social-fill-hover;
   }
 
   &:active {
-    svg {
-      opacity: 0.3;
-    }
+    opacity: 0.3;
   }
 }
 

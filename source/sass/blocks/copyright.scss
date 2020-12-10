@@ -31,16 +31,13 @@
 
 .copyright__link {
   padding: 4px;
+  color: $copyright-logo;
 
   &:hover {
-    .copyright__logo {
-      fill: $copyright-logo-hover;
-    }
+    color: $copyright-logo-hover;
   }
 
   &:active {
-    .copyright__logo {
-      opacity: 0.3;
-    }
+    opacity: 0.3;
   }
 }
