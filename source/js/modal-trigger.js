@@ -1,9 +1,10 @@
-let featuredOrder = document.querySelector(".featured__order");
+let modalTriggers = document.querySelectorAll(".modal-trigger");
 let modal = document.querySelector(".modal");
 let modalWrapper = document.querySelector(".modal__wrapper");
 let modalRadios = document.querySelectorAll(".modal__radio");
 let modalRadiosArray = [];
 let modalAdd = document.querySelector(".modal__add");
+let triggeredElement;
 
 console.log(modalRadios);
 
@@ -11,21 +12,24 @@ for (let i = 0; i < modalRadios.length; i++) {
   modalRadiosArray[i] = modalRadios[i];
 }
 
-featuredOrder.addEventListener("click", function(e) {
-  e.preventDefault();
-  modal.classList.add("modal--show");
-  requestAnimationFrame(function() {
-    modal.classList.add("modal--appear");
+for (modalTrigger of modalTriggers) {
+  modalTrigger.addEventListener("click", function(e) {
+    triggeredElement = (e.target.closest("a"));
+    e.preventDefault();
+    modal.classList.add("modal--show");
+    requestAnimationFrame(function() {
+      modal.classList.add("modal--appear");
+    })
+    modal.querySelector("input:checked").focus();
   })
-  modal.querySelector("input:checked").focus();
-})
+}
 
 // Closing function
 
 function closeModal() {
   modal.classList.remove("modal--appear");
   modal.addEventListener("transitionend", function() {modal.classList.remove("modal--show")}, {once: true});
-  featuredOrder.focus();
+  triggeredElement.focus();
 }
 
 // Closing on escape and tab cycle within the modal window

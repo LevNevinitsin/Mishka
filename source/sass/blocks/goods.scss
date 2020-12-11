@@ -305,10 +305,7 @@
 
   &:hover {
     opacity: 1;
-
-    .goods__path {
-      fill: $goods-icon-hover;
-    }
+    fill: $goods-icon-hover;
   }
 
   &:active {
