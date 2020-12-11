@@ -97,10 +97,13 @@ $footer-background: $gray-lightest;
 $logo-footer-hover: $main-color-darkest;
 $social-fill-hover: $main-color-darkest;
 $social-border: $gray-light;
-$copyright-hover: $main-color-darkest;
+$copyright-logo: $main-color;
+$copyright-logo-hover: $main-color-darkest;
 
 // Modal
 
+$modal-background: rgba($white, 0.9);
+$modal-wrapper-background: $white;
 $modal-border: $gray-almost-light;
 $modal-shadow: rgba($almost-black, 0.25);
 $modal-legend: $gray;

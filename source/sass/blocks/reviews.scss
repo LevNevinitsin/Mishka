@@ -29,7 +29,6 @@
 
     &::after {
       left: -1px;
-      // bottom: 0;
       width: calc(100% + 2px);
       height: 23px;
       background-image: url("../img/section_border_desktop_reviews.svg");
@@ -43,20 +42,20 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template: 79px auto auto auto auto / 50px 1fr 1fr;
-    width: 768px;
-    padding-right: 50px;
+    grid-template: 79px auto auto auto auto / minmax(50px, 1fr) 334px 334px 1fr;
+    width: auto;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-template: 79px auto auto auto auto / 175px 1fr 1fr;
-    width: auto;
+    margin: 0 auto;
     padding: 0;
   }
 }
 
 .reviews__title {
-  margin: 0 0 14px;
+  margin: 0;
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
@@ -91,33 +90,52 @@
     grid-row: 1 / 5;
     grid-column: 1 / 3;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1 / 6;
+  }
 }
 
-.reviews__list {
-  margin: 0 0 29px;
-  padding: 0;
-  list-style: none;
+.reviews__window {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 28px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     grid-row: 3 / 5;
     grid-column: 2 / 4;
     margin: 0;
   }
+}
 
-  @media (min-width: $desktop-width) {
-    min-height: 286px;
-  }
+.reviews__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .reviews__blockquote {
   margin: 0;
+
+  @media (max-width: $mobile-width-only) {
+    display: grid;
+    grid-template: minmax(300px, auto) 20px auto / 260px;
+    margin-top: -1px;
+  }
 }
 
 .reviews__text {
-  margin: 0 0 34px;
+  margin: 0;
   font-size: 15px;
   line-height: 30px;
   color: $reviews-text;
+
+  @media (max-width: $mobile-width-only) {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    align-self: center;
+  }
 
   @media (min-width: $tablet-width) {
     margin: 0 0 61px;
@@ -148,6 +166,11 @@
 }
 
 .reviews__cite {
+  @media (max-width: $mobile-width-only) {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
+
   @media (min-width: $tablet-width) {
     width: 330px;
   }
@@ -195,7 +218,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: -150px 0 0;
+    margin: -54px 0 0;
   }
 }
 
@@ -207,9 +230,27 @@
   border: 1px solid $review-toggle-border;
   background: $transparent;
 
-  @media (min-width: $tablet-width) {
-    width: 86px;
-    border: none;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 41%;
+    left: 28%;
+    width: 18px;
+    height: 18px;
+    border-left: 4px solid $review-toggle-arrow;
+    border-bottom: 4px solid $review-toggle-arrow;
+    transform: rotate(45deg) translateY(-41%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 49%;
+    width: 47px;
+    height: 4px;
+    background-color: $review-toggle-arrow;
+    transform: translateX(-49%);
   }
 
   &:hover {
@@ -224,35 +265,6 @@
     &::after {
       opacity: 0.3;
     }
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 41%;
-    left: 28%;
-    width: 18px;
-    height: 18px;
-    border-left: 4px solid $review-toggle-arrow;
-    border-bottom: 4px solid $review-toggle-arrow;
-    transform: rotate(45deg) translateY(-41%);
-  }
-
-  @media (min-width: $tablet-width) {
-    &::before {
-      left: 17%;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 45%;
-    left: 49%;
-    width: 47px;
-    height: 4px;
-    background-color: $review-toggle-arrow;
-    transform: translateX(-49%);
   }
 
   &--prev {
@@ -271,9 +283,29 @@
     }
 
     &::after {
-      left: 46.5%;
-      transform: translateX(-46.5%);
+      left: 46%;
+      transform: translateX(-46%);
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--prev {
+      &::before {
+        left: 17%;
+      }
+    }
+
+    &--next {
+      &::after {
+        left: 44%;
+        transform: translateX(-44%);
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 86px;
+    border: none;
   }
 }
 

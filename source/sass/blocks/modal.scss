@@ -1,37 +1,67 @@
 .modal {
-  padding: 29px 0 46px;
-  border-top: 1px solid $modal-border;
-  border-bottom: 1px solid $modal-border;
-  box-shadow: 0 5px 10px $modal-shadow;
+  display: none;
+  background-color: $modal-background;
   overflow-wrap: break-word;
+  opacity: 0;
+  transition: 0.4s opacity ease-out;
 
-  @media (min-width: $tablet-width) {
-    width: 566px;
-    border: 1px solid $modal-border;
+  &--show {
+    display: block;
+  }
+
+  &--appear {
+    opacity: 1;
   }
 }
 
 .modal__wrapper {
-  margin: 0 auto;
-  width: 260px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  padding: 29px 0 46px;
+  border-top: 1px solid $modal-border;
+  border-bottom: 1px solid $modal-border;
+  background-color: $modal-wrapper-background;
+  box-shadow: 0 5px 10px $modal-shadow;
+  transform: translate(0, -50%);
 
   @media (min-width: $tablet-width) {
-    width: auto;
+    left: 50%;
+    width: 568px;
+    padding: 38px 0 46px;
+    border: 1px solid $modal-border;
+    transform: translate(-50%, -50%);
   }
 }
 
 .modal__title {
-  width: 80%;
+  width: 280px;
   margin: 0 auto 14px;
   font-size: 25px;
-  line-height: 30px;
+  line-height: 31px;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
 
+  &::first-line {
+    line-height: 30px;
+  }
+
   @media (min-width: $tablet-width) {
+    width: 80%;
+    margin: 0 auto 11px;
     font-size: 30px;
     line-height: 57px;
+
+    &::first-line {
+      line-height: 57px;
+    }
+  }
+}
+
+.modal__space {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
@@ -43,21 +73,27 @@
 }
 
 .modal__field-group {
-  margin: 0 0 31px;
+  width: 260px;
+  margin: 0 auto 31px;
   padding: 0;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
 }
 
 .modal__legend {
   display: block;
   width: 179px;
-  margin: 0 0 21px;
+  margin: 0 auto 21px;
   font-size: 15px;
   line-height: 30px;
   text-align: center;
   color: $modal-legend;
 
   @media (min-width: $tablet-width) {
+    margin: 0 auto 19px;
     font-size: 17px;
   }
 }
@@ -132,8 +168,10 @@
 }
 
 .modal__add {
+  display: block;
   padding: 18px;
   width: 260px;
+  margin: 0 auto;
   font-family: inherit;
   font-size: 17px;
   line-height: 16px;
@@ -146,9 +184,11 @@
   border: none;
 
   @media (min-width: $tablet-width) {
-    display: block;
     width: 350px;
-    margin: 0 auto;
     padding: 21px 20px 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 18px 20px;
   }
 }
