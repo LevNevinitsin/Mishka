@@ -594,10 +594,7 @@
     &:focus {
       + .order__icon {
         opacity: 1;
-
-        .order__path {
-          fill: $form-icon-interact;
-        }
+        fill: $form-icon-interact;
       }
     }
   }

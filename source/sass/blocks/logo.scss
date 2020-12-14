@@ -17,16 +17,14 @@
   }
 
   &--bottom {
+    color: $logo-footer;
+
     &:hover {
-      .logo__path {
-        fill: $logo-footer-hover;
-      }
+      color: $logo-footer-hover;
     }
 
     &:active {
-      .logo__image {
-        opacity: 0.3;
-      }
+      opacity: 0.3;
     }
   }
 }
