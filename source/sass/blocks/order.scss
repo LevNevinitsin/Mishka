@@ -107,7 +107,7 @@
   &::after {
     content: "";
     flex: 0 1 200px;
-    height: 2px; // Если сделать просто через 1px и центрирование, не попадает в pixel perfect
+    height: 2px;
     background-color: $separator-line;
     border-top: 1px solid $separator-line-border;
   }
