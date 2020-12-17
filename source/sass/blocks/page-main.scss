@@ -38,13 +38,13 @@
     overflow-x: hidden;
   }
 
-  &--form {
+  &--inner {
     padding: 73px 0 74px;
     background-color: $holder-background-inner;
   }
 
   @media (max-width: $mobile-width-only) {
-    &--form {
+    &--inner {
       margin-bottom: 16px;
     }
   }
@@ -54,7 +54,7 @@
       grid-template: auto 371px 119px auto / 1fr 668px 1fr;
     }
 
-    &--form {
+    &--inner {
       padding: 33px 0 63px;
     }
   }
@@ -64,7 +64,7 @@
       grid-template: auto 355px 119px auto / 1fr 1050px 1fr;
     }
 
-    &--form {
+    &--inner {
       padding: 34px 0 79px;
     }
   }
@@ -135,7 +135,7 @@
       padding-top: 90px;
     }
 
-    &--form {
+    &--inner {
       padding-left: 3px;
     }
   }
@@ -174,12 +174,12 @@
     z-index: 3;
   }
 
-  &--form,
+  &--inner,
   &--catalogue {
     background-color: $waves-background-inner;
   }
 
-  &--form {
+  &--inner {
     margin-bottom: 54px;
   }
 
@@ -199,12 +199,12 @@
       background-image: url("../img/wave_big_desktop.svg");
     }
 
-    &--form,
+    &--inner,
     &--catalogue {
       background-image: url("../img/wave_big_desktop_inner.svg");
     }
 
-    &--form {
+    &--inner {
       margin-bottom: 99px;
     }
 
