@@ -1,6 +1,6 @@
-let mainNavigationBasic = document.querySelector(".main-navigation--basic");
-let mainNavigationSearch = document.querySelector(".main-navigation--search");
-let menuToggleButton = document.querySelector(".page-header__toggle");
+const mainNavigationBasic = document.querySelector(".main-navigation--basic");
+const mainNavigationSearch = document.querySelector(".main-navigation--search");
+const menuToggleButton = document.querySelector(".page-header__toggle");
 const transitionTime = 200;
 
 // Initialization
@@ -27,7 +27,7 @@ function transitionSwitch(menu) {
 
 function openMenu(menu) {
   menu.classList.remove("main-navigation--closed");
-  let actualHeight = menu.scrollHeight;
+  const actualHeight = menu.scrollHeight;
 
   requestAnimationFrame(function() {
     menu.style.height = 0;
@@ -46,7 +46,7 @@ function openMenu(menu) {
 // Menu closing function
 
 function closeMenu(menu) {
-  let actualHeight = menu.scrollHeight;
+  const actualHeight = menu.scrollHeight;
 
   requestAnimationFrame(function() {
     menu.style.height = actualHeight + "px";

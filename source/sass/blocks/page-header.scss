@@ -63,7 +63,7 @@
 }
 
 .page-header__box {
-  padding: 17px 1px 18px 0;
+  padding: 17px 3px 18px 0;
   display: block;
   width: min-content;
   margin: 0 auto;
@@ -114,6 +114,10 @@
     background-image: url("../img/icon_menu_close.svg");
     background-repeat: no-repeat;
     transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 
   &--nojs {
