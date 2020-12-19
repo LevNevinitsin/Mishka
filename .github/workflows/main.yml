@@ -41,5 +41,5 @@ jobs:
           # в данном случае его название KEY
           GITHUB_TOKEN: ${{ secrets.MISHKA_BUILD }}
           BRANCH: gh-pages
-          FOLDER: public
+          FOLDER: build
           CLEAN: true
