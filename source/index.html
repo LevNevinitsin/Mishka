@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Качественные предметы интерьера и детские игрушки ручной работы отечественного производства по доступным ценам">
     <title>Интернет-магазин «Мишка»</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
@@ -193,7 +196,10 @@
       <section class="page-main__reviews reviews">
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title">Отзывы</h2>
-          <img class="reviews__image" src="img/review_bg.jpg" srcset="img/review_bg@2x.jpg 2x" width="350" height="457" alt="Правая часть вязаной подложки круглой формы белого цвета">
+          <picture>
+            <source type="image/webp" srcset="img/review_bg.webp 1x, img/review_bg@2x.webp 2x">
+            <img class="reviews__image" src="img/review_bg.jpg" srcset="img/review_bg@2x.jpg 2x" width="350" height="457" alt="Правая часть вязаной подложки круглой формы белого цвета" loading="lazy">
+          </picture>
           <div class="reviews__window slider__window">
             <ul class="reviews__list slider__list">
               <li class="reviews__item slider__item slider__item--active">
